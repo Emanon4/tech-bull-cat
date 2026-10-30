@@ -146,8 +146,8 @@
       menuClose: "Close navigation",
       copied: "Copied WeChat ID: qianpai857",
       copyFallback: "Select or long-press to copy: qianpai857",
-      result: (n) => `${n} stories · Snapshot: 30 Oct 2026`,
-      showing: (n, total) => `${n} of ${total} stories shown`,
+      result: (n) => `${n} ${n === 1 ? "story" : "stories"} · Snapshot: 30 Oct 2026`,
+      showing: (n, total) => `${n} of ${total} ${total === 1 ? "story" : "stories"} shown`,
       pageTitle: "科创大牛猫 · Screening room",
     },
     ja: {
@@ -218,40 +218,10 @@
       pageTitle: "科创大牛猫 · 上映室",
     },
   };
-  const internationalTitles = {
-    "7292720570997722387": [
-      "Inside the world of miHoYo",
-      "miHoYoのビジネスの世界",
-    ],
-    "7323511047669796123": ["Tencent vs. NetEase", "テンセントとネットイース"],
-    "7458291156707724595": [
-      "CES · Made in China",
-      "CES · 中国のイノベーション",
-    ],
-    "7493118041857854757": [
-      "Deepal S09 · An extra pair of eyes",
-      "深藍S09 · もう一つの目",
-    ],
-    "7499106691326266643": [
-      "Yangwang U7 · Behind the tech",
-      "仰望U7 · 技術の舞台裏",
-    ],
-    "7274548309895826748": ["The semiconductor story", "半導体、その物語"],
-    "7688188169451261199": [
-      "Li Auto · Chassis in action",
-      "理想 · シャシーの実力",
-    ],
-    "7613448426792946953": ["MWC · AI glasses", "MWC · AIグラス"],
-    "7570342501706468627": [
-      "CIIE · Materials for life",
-      "輸入博 · 素材と暮らし",
-    ],
-  };
   const t = (key) => translations[state.lang][key];
   const titleOf = (work) =>
-    state.lang === "zh" || !internationalTitles[work.id]
-      ? work.title
-      : internationalTitles[work.id][state.lang === "en" ? 0 : 1];
+    state.lang === "zh" ? work.title : work.titles?.[state.lang] || work.title;
+  const searchText = (value) => value.normalize("NFKC").toLocaleLowerCase();
   const metric = (raw, value) =>
     state.lang !== "en"
       ? raw
@@ -347,8 +317,9 @@
   function matches(work) {
     const categoryMatch =
       state.category === "all" || work.category === state.category;
-    const haystack =
-      `${work.title} ${work.originalTitle} ${titleOf(work)}`.toLocaleLowerCase();
+    const haystack = searchText(
+      [work.title, work.originalTitle, ...Object.values(work.titles || {})].join(" "),
+    );
     return categoryMatch && (!state.query || haystack.includes(state.query));
   }
   function render() {
@@ -472,7 +443,7 @@
     button.addEventListener("click", () => applyLanguage(button.dataset.lang)),
   );
   $("#searchInput").addEventListener("input", (event) => {
-    state.query = event.target.value.trim().toLocaleLowerCase();
+    state.query = searchText(event.target.value.trim());
     state.limit = 12;
     render();
   });

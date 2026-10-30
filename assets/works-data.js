@@ -18,6 +18,10 @@ window.DNM_WORKS = {
   works: [
     {
       id: "7292720570997722387",
+      titles: {
+        en: "Inside the world of miHoYo",
+        ja: "miHoYoのビジネスの世界",
+      },
       title: "米哈游的商业世界",
       originalTitle: "1年营收300亿，米哈游有多赚钱？",
       category: "business",
@@ -32,6 +36,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7323511047669796123",
+      titles: {
+        en: "Tencent vs. NetEase",
+        ja: "テンセントとネットイース",
+      },
       title: "腾讯与网易的游戏之战",
       originalTitle: "腾讯游戏大战网易游戏，你觉得谁会赢？",
       category: "business",
@@ -46,6 +54,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7458291156707724595",
+      titles: {
+        en: "CES · Made in China",
+        ja: "CES · 中国のイノベーション",
+      },
       title: "CES · 中国智造",
       originalTitle:
         "听说今年的全球科技春晚国产技术让人信心爆棚？我们来给大家证实一下！",
@@ -61,6 +73,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7493118041857854757",
+      titles: {
+        en: "Deepal S09 · An extra pair of eyes",
+        ja: "深藍S09 · もう一つの目",
+      },
       title: "深蓝 S09 · 多一双眼睛",
       originalTitle: "智驾不能取代你，是帮你多长一双眼睛盯着危险!",
       category: "cars",
@@ -75,6 +91,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7499106691326266643",
+      titles: {
+        en: "Yangwang U7 · Behind the tech",
+        ja: "仰望U7 · 技術の舞台裏",
+      },
       title: "仰望 U7 · 技术背后",
       originalTitle: "它改变了国运，却鲜为人知！",
       category: "cars",
@@ -89,6 +109,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7274548309895826748",
+      titles: {
+        en: "The semiconductor story",
+        ja: "半導体、その物語",
+      },
       title: "芯片这个局",
       originalTitle: "我可以提前说一句：芯片这个局我们破了吗？！",
       category: "digital",
@@ -103,6 +127,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7688188169451261199",
+      titles: {
+        en: "Li Auto · Chassis in action",
+        ja: "理想 · シャシーの実力",
+      },
       title: "理想 · 底盘有功夫",
       originalTitle: "揭秘谢苗TVC原声花絮：功夫是真的，底盘也是真的！",
       category: "cars",
@@ -117,6 +145,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7372497342827597108",
+      titles: {
+        en: "Auto CEOs go live: the latest trend in China's car industry",
+        ja: "自動車メーカーのトップが続々ライブ配信へ。中国の車業界の新潮流",
+      },
       title: "一把手纷纷下场干直播，国内车企又卷出了一股新潮流！",
       originalTitle: "一把手纷纷下场干直播，国内车企又卷出了一股新潮流！",
       category: "cars",
@@ -131,6 +163,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7547631077276339502",
+      titles: {
+        en: "It's 2025. Are you using driver assistance yet?",
+        ja: "2025年、運転支援機能をもう使っていますか？",
+      },
       title: "2025年了，还没用上智能辅助驾驶吗？",
       originalTitle: "2025年了，还没用上智能辅助驾驶吗？",
       category: "cars",
@@ -145,6 +181,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7643761355895475492",
+      titles: {
+        en: "How are Chinese brands overtaking Japanese rivals?",
+        ja: "中国ブランドはなぜ日本勢を追い越せるのか？",
+      },
       title: "国产凭什么反超日系？",
       originalTitle: "国产凭什么反超日系？",
       category: "digital",
@@ -159,6 +199,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7613448426792946953",
+      titles: {
+        en: "MWC · AI glasses",
+        ja: "MWC · AIグラス",
+      },
       title: "MWC · AI眼镜",
       originalTitle: "MetaVS千问AI眼镜，什么叫言不符实和表里如一!",
       category: "field",
@@ -173,6 +217,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7674841247256694059",
+      titles: {
+        en: "ZhuiGuang S brings an iconic scene from 16 years ago to life",
+        ja: "16年前の名シーンを、追光Sが現実に",
+      },
       title: "十六年前的名场面，被追光S开进现实！",
       originalTitle: "十六年前的名场面，被追光S开进现实！",
       category: "cars",
@@ -187,6 +235,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7617097116460158249",
+      titles: {
+        en: "What is it like to have an air conditioner with a brain?",
+        ja: "「頭脳」を持つエアコンは、どれほど快適なのか？",
+      },
       title: '有一台长"脑子"的空调，到底有多爽？',
       originalTitle: '有一台长"脑子"的空调，到底有多爽？',
       category: "field",
@@ -201,6 +253,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7515274801225780492",
+      titles: {
+        en: "AEB in action: automatic emergency braking that saves lives",
+        ja: "命を救う瞬間。自動緊急ブレーキAEBの実力",
+      },
       title: "AEB的高光时刻，它真的在实打实地救人啊！",
       originalTitle: "AEB的高光时刻，它真的在实打实地救人啊！",
       category: "cars",
@@ -215,6 +271,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7570342501706468627",
+      titles: {
+        en: "CIIE · Materials for life",
+        ja: "輸入博 · 素材と暮らし",
+      },
       title: "进博会 · 材料与生活",
       originalTitle: "一家创立于清朝的公司如何承包你的现代生活……",
       category: "field",
@@ -229,6 +289,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7617073833547222315",
+      titles: {
+        en: "Big wishes, real engineering: Haier surprises its fans",
+        ja: "大胆なリクエストに技術で応える、ハイアールの本気",
+      },
       title: "这届网友真敢许愿！海尔硬核宠粉看呆我了！",
       originalTitle: "这届网友真敢许愿！海尔硬核宠粉看呆我了！",
       category: "digital",
@@ -243,6 +307,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7668935813262036287",
+      titles: {
+        en: "An auto launch that opens by thanking the competition",
+        ja: "競合への感謝から始まる、自動車メーカーの発表会",
+      },
       title: "车企发布会不吹自己先谢同行，这格局我没见过！",
       originalTitle: "车企发布会不吹自己先谢同行，这格局我没见过！",
       category: "cars",
@@ -257,6 +325,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7664160046368034083",
+      titles: {
+        en: "Iris payments bring Qwen AI glasses one step closer to the future",
+        ja: "虹彩で決済する時代へ。Qwen AIグラスが未来にまた一歩",
+      },
       title: "当虹膜成为支付密钥，千问AI眼镜离未来又近了一步",
       originalTitle: "当虹膜成为支付密钥，千问AI眼镜离未来又近了一步",
       category: "field",
@@ -271,6 +343,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7432240535462563124",
+      titles: {
+        en: "Huawei Mate 70 chips: another sleepless night for the US",
+        ja: "米国を再び眠れなくする、ファーウェイMate 70シリーズの半導体",
+      },
       title: "华为Mate70系列的芯片，又要让美国彻夜难眠了",
       originalTitle: "华为Mate70系列的芯片，又要让美国彻夜难眠了",
       category: "digital",
@@ -285,6 +361,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7634394607274478894",
+      titles: {
+        en: "When the chassis reads the road: understanding vehicle-wide intelligence",
+        ja: "シャシーが「空気」を読むとき。クルマ全体の知能を知る",
+      },
       title: "当底盘开始读懂“气氛”，我才理解了什么才是真正的整车智能",
       originalTitle: "当底盘开始读懂“气氛”，我才理解了什么才是真正的整车智能",
       category: "field",
@@ -299,6 +379,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7655204929866599707",
+      titles: {
+        en: "73 Nürburgring corners without a driver: what did Xiaomi prove?",
+        ja: "ニュルブルクリンクの73コーナーを無人走行。シャオミは何を実証した？",
+      },
       title: "无人驾驶跑完纽北 73 个弯，小米这次验证了什么？",
       originalTitle: "无人驾驶跑完纽北 73 个弯，小米这次验证了什么？",
       category: "cars",
@@ -313,6 +397,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7453433695844814118",
+      titles: {
+        en: "Rear-ended on a highway and falling 20 metres: can the occupants survive?",
+        ja: "高速道路で追突され、高架から20メートル落下。乗員は助かるのか？",
+      },
       title: "高速被追尾坠落20米深的高架桥，车内人员还能生还吗？",
       originalTitle: "高速被追尾坠落20米深的高架桥，车内人员还能生还吗？",
       category: "field",
@@ -327,6 +415,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7680498507207265586",
+      titles: {
+        en: "A robot and a robot dog enter a car factory at midnight. What are they looking for?",
+        ja: "深夜の自動車工場にロボットとロボット犬が潜入。何を探している？",
+      },
       title: "一个机器人和一只机器狗溜进深夜的汽车工厂，它们要找的，竟然是……",
       originalTitle:
         "一个机器人和一只机器狗溜进深夜的汽车工厂，它们要找的，竟然是……",
@@ -342,6 +434,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7696107004040842538",
+      titles: {
+        en: "How is AI's body of steel built?",
+        ja: "AIの「鋼の体」は、どう作られるのか？",
+      },
       title: "AI的「钢铁之躯」是怎样炼成的？",
       originalTitle: "AI的「钢铁之躯」是怎样炼成的？",
       category: "field",
@@ -356,6 +452,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7577737142961458442",
+      titles: {
+        en: "From marketing star to internet target: who did Xiaomi upset?",
+        ja: "「マーケティングの神」からネットの標的へ。シャオミは誰を怒らせた？",
+      },
       title: "从“营销之神”到“全网公敌”，小米到底得罪了谁？",
       originalTitle: "从“营销之神”到“全网公敌”，小米到底得罪了谁？",
       category: "business",
@@ -370,6 +470,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7297907987966938378",
+      titles: {
+        en: "Yu Hua: 15.5 million in earnings from 120,000 Chinese characters, and a life of leisure",
+        ja: "12万字で1550万を稼いだ作家・余華。充実したのんびり生活",
+      },
       title: "短短12万字挣了1550万，网红余华的躺平生活很丰富",
       originalTitle: "短短12万字挣了1550万，网红余华的躺平生活很丰富",
       category: "business",
@@ -384,6 +488,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7310522529993575730",
+      titles: {
+        en: "Wanda is running out of time",
+        ja: "万達に残された時間は、もう少ない",
+      },
       title: "留给万达的时间已经不多了……",
       originalTitle: "留给万达的时间已经不多了……",
       category: "business",
@@ -398,6 +506,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7287890869150076171",
+      titles: {
+        en: "From musical prodigy to venture capitalist: an extraordinary career",
+        ja: "音楽の天才からベンチャー投資家へ。規格外のキャリア",
+      },
       title: "从音乐天才到创投大佬，他的人生宛如开挂！",
       originalTitle: "从音乐天才到创投大佬，他的人生宛如开挂！",
       category: "business",
@@ -412,6 +524,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7307170263957916962",
+      titles: {
+        en: "Why you can count on miHoYo to make another hit",
+        ja: "miHoYoなら、次の大ヒットも生み出せる",
+      },
       title: "你永远可以相信，米哈游能做出下一个大爆款！",
       originalTitle: "你永远可以相信，米哈游能做出下一个大爆款！",
       category: "business",
@@ -426,6 +542,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7273799885126749476",
+      titles: {
+        en: "Inside the tightly scripted inheritance plans of the ultra-rich",
+        ja: "緻密なシナリオのような、超富裕層の資産継承",
+      },
       title: "顶级富豪的财富传承，犹如一本严丝合缝的「剧本杀」！",
       originalTitle: "顶级富豪的财富传承，犹如一本严丝合缝的「剧本杀」！",
       category: "business",
@@ -440,6 +560,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7313858002933583116",
+      titles: {
+        en: "Is Jack Ma about to make his next move?",
+        ja: "沈黙を続けるジャック・マーは、次の一手を打つのか？",
+      },
       title: "沉寂的马云，这次要出手了吗？",
       originalTitle: "沉寂的马云，这次要出手了吗？",
       category: "business",
@@ -454,6 +578,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7305338756100295990",
+      titles: {
+        en: "Huawei in the south, Xiaomi in the north: a 2-trillion plan takes shape",
+        ja: "南のファーウェイ、北のシャオミ。2兆規模の新構想が始動",
+      },
       title: "南有华为、北有小米！2万亿新宏图计划启动，中国力量狂飙突进！",
       originalTitle:
         "南有华为、北有小米！2万亿新宏图计划启动，中国力量狂飙突进！",
@@ -469,6 +597,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7562117700835724559",
+      titles: {
+        en: "Why can Huawei price high while Xiaomi treads carefully?",
+        ja: "ファーウェイはなぜ高く売れ、シャオミは価格に慎重なのか？",
+      },
       title: "为什么华为敢把价格卖那么高，而小米定价总是小心翼翼？",
       originalTitle: "为什么华为敢把价格卖那么高，而小米定价总是小心翼翼？",
       category: "business",
@@ -483,6 +615,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7633430566947409162",
+      titles: {
+        en: "A new opening for Chinese manufacturers going global",
+        ja: "海外に挑む中国メーカーに、新たな追い風",
+      },
       title: "中国制造出海，正在悄悄迎来新风口",
       originalTitle: "中国制造出海，正在悄悄迎来新风口",
       category: "business",
@@ -497,6 +633,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7598503331039907082",
+      titles: {
+        en: "Beyond language models: Amap's ambitions for spatial AI",
+        ja: "言語モデルの先へ。高徳地図Amapが挑む空間AI",
+      },
       title: "高德的野心藏不住了！都在卷语言大模型时，高德把AI砸向了空间智能！",
       originalTitle:
         "高德的野心藏不住了！都在卷语言大模型时，高德把AI砸向了空间智能！",
@@ -512,6 +652,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7585444365854657792",
+      titles: {
+        en: "Uncovering the AI industry's hidden supply chain",
+        ja: "AI業界を支える、見えないサプライチェーンを探る",
+      },
       title: "一条视频把AI行业隐形产业链扒个底朝天！",
       originalTitle: "一条视频把AI行业隐形产业链扒个底朝天！",
       category: "business",
@@ -526,6 +670,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7691179309868443365",
+      titles: {
+        en: "2026 foldable showdown: five phones running Douyin",
+        ja: "2026年の折りたたみスマホ対決。5台でDouyinを開いて比較",
+      },
       title: "2026年折叠屏大乱斗：五台机器打开抖音，差距一眼看穿！",
       originalTitle: "2026年折叠屏大乱斗：五台机器打开抖音，差距一眼看穿！",
       category: "digital",
@@ -540,6 +688,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7688918683472727346",
+      titles: {
+        en: "Scale a phone battery up 1,000 times: what does frequent fast charging do in summer?",
+        ja: "スマホの電池を1000倍にしたら？夏の頻繁な急速充電で起こること",
+      },
       title: "把手机电池等比放大1000倍，夏天高频快充会发生什么？",
       originalTitle: "把手机电池等比放大1000倍，夏天高频快充会发生什么？",
       category: "cars",
@@ -554,6 +706,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7670434284355718442",
+      titles: {
+        en: "Why do some EV batteries last eight years while others fade early?",
+        ja: "8年走っても元気なEVと、早く劣化するEV。その差は電池セルだけではない",
+      },
       title:
         "为什么有的电车开八年还正常，有的却早早出现衰减？答案不只在电芯里。",
       originalTitle:
@@ -570,6 +726,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7685581495372696872",
+      titles: {
+        en: "How much of your phone's 100% battery charge can you actually use?",
+        ja: "スマホに表示される充電100％、実際に使えるのはどれくらい？",
+      },
       title: "你手机里的100％电量，实际到底能用掉多少？",
       originalTitle: "你手机里的100％电量，实际到底能用掉多少？",
       category: "digital",
@@ -584,6 +744,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7510170429919726911",
+      titles: {
+        en: "Huawei keeps its 7nm chips quiet. Why is Xiaomi going public?",
+        ja: "ファーウェイが7nm半導体で慎重な一方、シャオミはなぜ堂々と発表できる？",
+      },
       title: "华为做7nm芯片躲躲藏藏，小米凭什么敢高调行事？",
       originalTitle: "华为做7nm芯片躲躲藏藏，小米凭什么敢高调行事？",
       category: "digital",
@@ -598,6 +762,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7506374742333492514",
+      titles: {
+        en: "What is the strategy behind HarmonyOS PCs?",
+        ja: "HarmonyOS搭載PCは、どんな戦略を描いているのか？",
+      },
       title: "不吹不黑，鸿蒙PC到底在下一盘怎样的大棋？",
       originalTitle: "不吹不黑，鸿蒙PC到底在下一盘怎样的大棋？",
       category: "digital",
@@ -612,6 +780,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7629607699910626601",
+      titles: {
+        en: "Why steer-by-wire could become standard in the next generation of cars",
+        ja: "次世代のクルマでステア・バイ・ワイヤが標準になる理由",
+      },
       title: "为啥线控转向会成为下一代好车标配？",
       originalTitle: "为啥线控转向会成为下一代好车标配？",
       category: "cars",
@@ -626,6 +798,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7567418011297058102",
+      titles: {
+        en: "An automotive power player that doesn't build cars",
+        ja: "クルマを作らず、自動車業界の隠れた大物に",
+      },
       title: "不造车却成车圈隐形大佬",
       originalTitle: "不造车却成车圈隐形大佬",
       category: "cars",
@@ -640,6 +816,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7583612755786173702",
+      titles: {
+        en: "The new BMW iX3: a super-brain for electric driving pleasure",
+        ja: "新世代BMW iX3。「スーパーブレイン」で電動時代の駆けぬける歓びへ",
+      },
       title:
         "#新世代BMWiX3 用“超级大脑”创造智能电动时代下的驾驶乐趣！#宝马ix3#驾驶乐趣进入新世代",
       originalTitle:
@@ -656,6 +836,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7680887531939892507",
+      titles: {
+        en: "Lotus upgrades three models: more confidence behind the horsepower",
+        ja: "ロータスが3車種を進化。大きなパワーを、もっと安心して楽しむ",
+      },
       title: "都在卷马力？莲花三车升级，让大马力更有底气！",
       originalTitle: "都在卷马力？莲花三车升级，让大马力更有底气！",
       category: "cars",
@@ -670,6 +854,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7681240293936614696",
+      titles: {
+        en: "Why did an entire auto executive team visit more than ten cities?",
+        ja: "自動車メーカーの経営陣が全員で全国十数都市へ。その理由は？",
+      },
       title: '一车企全体高管集体"翘班"，跑遍全国十余城，只为......',
       originalTitle: '一车企全体高管集体"翘班"，跑遍全国十余城，只为......',
       category: "cars",
@@ -684,6 +872,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7551686980648652084",
+      titles: {
+        en: "How to choose a good TV: one video explains it all",
+        ja: "いいテレビはどう選ぶ？この一本でわかる選び方",
+      },
       title: "一个视频，彻底帮你搞懂如何挑选一台好电视！",
       originalTitle: "一个视频，彻底帮你搞懂如何挑选一台好电视！",
       category: "digital",
@@ -698,6 +890,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7431874261544947007",
+      titles: {
+        en: "How did Samsung stay on top of the phone industry for 12 years?",
+        ja: "サムスンはなぜ12年連続でスマホ業界のトップに立てたのか？",
+      },
       title: "连续12年稳坐手机界老大哥地位，三星凭什么？",
       originalTitle: "连续12年稳坐手机界老大哥地位，三星凭什么？",
       category: "digital",
@@ -712,6 +908,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7698647977732164914",
+      titles: {
+        en: "Two years of WeChat on HarmonyOS: 85 million installs and a growing partnership",
+        ja: "HarmonyOS版WeChatの2周年。8500万インストールで示した歩み",
+      },
       title:
         "微信鸿蒙版两周年：从陌生到熟悉的并肩作战，用8500万装机交出了答卷！",
       originalTitle:
@@ -728,6 +928,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7621378240086691108",
+      titles: {
+        en: "Are brain-computer interfaces humanity's next step?",
+        ja: "人類の次の進化は、ブレイン・コンピューター・インターフェースなのか？",
+      },
       title: "人类进化的下一站，是脑机接口吗？",
       originalTitle: "人类进化的下一站，是脑机接口吗？",
       category: "digital",
@@ -742,6 +946,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7686439158071577875",
+      titles: {
+        en: "Meet U2-Flash: Unisound's new contender in AI models",
+        ja: "中国AIモデルの新たな注目株。雲知声UnisoundのU2-Flash",
+      },
       title: "国产模型又来了一位黑马：聊聊云知声U2-Flash的主力之路！",
       originalTitle: "国产模型又来了一位黑马：聊聊云知声U2-Flash的主力之路！",
       category: "digital",
@@ -756,6 +964,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7645253065548860710",
+      titles: {
+        en: "How AI creation is changing the rules of advertising reach",
+        ja: "AIによる制作が、広告の届き方を変え始めている",
+      },
       title: "AI创作正在改写广告内容的流量规则",
       originalTitle: "AI创作正在改写广告内容的流量规则",
       category: "digital",
@@ -770,6 +982,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7591340278062140672",
+      titles: {
+        en: "TRAE China SOLO is now open to everyone for free",
+        ja: "招待待ちから全面開放へ。TRAE中国版SOLOが誰でも無料に",
+      },
       title: "从“一码难求”，到全面开放！TRAE中国版SOLO终于所有人都能免费用了！",
       originalTitle:
         "从“一码难求”，到全面开放！TRAE中国版SOLO终于所有人都能免费用了！",
@@ -785,6 +1001,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7655901385078213942",
+      titles: {
+        en: "Testing China Mobile's intelligent, accessible connectivity at MWC",
+        ja: "MWCで体験。中国移動の「モバイルの知能を、誰もが使える世界へ」",
+      },
       title: "MWC现场实测：中国移动「移动智能 无界普惠」有多猛？！",
       originalTitle: "MWC现场实测：中国移动「移动智能 无界普惠」有多猛？！",
       category: "field",
@@ -799,6 +1019,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7605931087985986825",
+      titles: {
+        en: "Chinese brands take the stage at the Milan Winter Olympics",
+        ja: "ミラノ冬季五輪の現場で見た、中国ブランドの存在感",
+      },
       title: "在米兰冬奥现场，我看到了一场中国品牌的震撼大秀！",
       originalTitle: "在米兰冬奥现场，我看到了一场中国品牌的震撼大秀！",
       category: "field",
@@ -813,6 +1037,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7550582758981111074",
+      titles: {
+        en: "After IFA: understanding AI infrastructure and the future of productivity",
+        ja: "IFAで見えた、これからの生産性を支えるAIインフラ",
+      },
       title: "逛完IFA我发现：未来生产力，先看懂“AI基建”！",
       originalTitle: "逛完IFA我发现：未来生产力，先看懂“AI基建”！",
       category: "field",
@@ -827,6 +1055,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7548713323148135730",
+      titles: {
+        en: "No appetite after cooking? Your range hood may need an upgrade",
+        ja: "料理をすると食欲がなくなる？レンジフードの見直しどきかも",
+      },
       title: "做完饭没食欲？你可能需要换油烟机了！",
       originalTitle: "做完饭没食欲？你可能需要换油烟机了！",
       category: "field",
@@ -841,6 +1073,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7537515274505964826",
+      titles: {
+        en: "Exploring embodied AI robots in Beijing's Yizhuang district",
+        ja: "北京・亦荘で、身体を持つAIロボットを見に行こう",
+      },
       title: "来北京亦庄看具身智能机器人！",
       originalTitle: "来北京亦庄看具身智能机器人！",
       category: "field",
@@ -855,6 +1091,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7572417851991149839",
+      titles: {
+        en: "Unexpected uses for robot dogs at China's National Games",
+        ja: "中国の全国運動会で発見。ロボット犬の意外な使い道",
+      },
       title: "机器狗有什么意想不到的用途？来全运会上看看吧！",
       originalTitle: "机器狗有什么意想不到的用途？来全运会上看看吧！",
       category: "field",
@@ -869,6 +1109,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7633717899143695635",
+      titles: {
+        en: "Daka Robotics builds Qiji: a robot horse designed for tonne-scale loads",
+        ja: "大咖ロボティクスの「騏驥」。トン単位の荷重を担うロボット馬",
+      },
       title: "大咖机器人创造“骐骥”，超负载吨级机器马，真正的生产力工具来了！",
       originalTitle:
         "大咖机器人创造“骐骥”，超负载吨级机器马，真正的生产力工具来了！",
@@ -884,6 +1128,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7566471905494977818",
+      titles: {
+        en: "Inside the Tai 7 production line: how a good car is made",
+        ja: "鈦7の「過酷な生産ライン」へ。いいクルマができるまで",
+      },
       title: "探访钛7“魔鬼生产线”，揭秘好车炼成记",
       originalTitle: "探访钛7“魔鬼生产线”，揭秘好车炼成记",
       category: "field",
@@ -898,6 +1146,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7455254071977594146",
+      titles: {
+        en: "What does it feel like to stand in 130 km/h wind?",
+        ja: "時速130キロの風の中に立つと、どんな感覚？",
+      },
       title: "身处时速130公里的风中，是一种怎样的体验？",
       originalTitle: "身处时速130公里的风中，是一种怎样的体验？",
       category: "field",
@@ -912,6 +1164,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7350927790004276530",
+      titles: {
+        en: "No water refills, no emptying: Charles Zhang tries a robot vacuum",
+        ja: "給水も排水もおまかせ。張朝陽が絶賛したロボット掃除機",
+      },
       title: "免加水免倒水的扫地机器人，张朝阳现场十连赞！",
       originalTitle: "免加水免倒水的扫地机器人，张朝阳现场十连赞！",
       category: "field",
@@ -926,6 +1182,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7341379343005863177",
+      titles: {
+        en: "MWC 2024 · China Mobile pavilion",
+        ja: "MWC 2024 · 中国移動の展示エリア",
+      },
       title: "MWC 2024 · 中国移动展区",
       originalTitle:
         "#2024年世界移动通信大会 中国移动展区生动体现出5G-A的研发成果，带来比5G提升10倍的网络，能够支撑更多场景，服务社会，造福人民。#看世界移动闪耀MWC 此次大会，中国移动通过水墨等中式元素向世界展示中国的科技实…",
@@ -941,6 +1201,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7458240816067185960",
+      titles: {
+        en: "Chinese new-energy vehicles make an impact in the US",
+        ja: "中国の新エネルギー車が、米国で存在感を放つ",
+      },
       title: "这次，国产新能源汽车在美国真的杀疯了！",
       originalTitle: "这次，国产新能源汽车在美国真的杀疯了！",
       category: "field",
@@ -955,6 +1219,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7225513169857301816",
+      titles: {
+        en: "Inside IM Motors' futuristic smart cockpit",
+        ja: "人より賢い？IM智己汽車の未来的なスマートコックピット",
+      },
       title: "比人还聪明，被这台离未来无限接近的座舱惊艳到了！@IM智己汽车",
       originalTitle:
         "比人还聪明，被这台离未来无限接近的座舱惊艳到了！@IM智己汽车",
@@ -970,6 +1238,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7484217029222747403",
+      titles: {
+        en: "The giant whale behind the wave of AI home appliances",
+        ja: "AI家電の進化を後押しした、あの巨大なクジラ",
+      },
       title: "所有AI家电都应该感谢那条巨鲸！",
       originalTitle: "所有AI家电都应该感谢那条巨鲸！",
       category: "field",
@@ -984,6 +1256,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7676870114851048747",
+      titles: {
+        en: "An AlphaGo moment for humanoid robots on the tennis court",
+        ja: "人型ロボットのAlphaGoの瞬間。中国のロボットがテニスコートへ",
+      },
       title: "AlphaGo时刻来了！中国人形机器人在网球场上把人类给打出汗了！",
       originalTitle:
         "AlphaGo时刻来了！中国人形机器人在网球场上把人类给打出汗了！",
@@ -999,6 +1275,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7618611135398432038",
+      titles: {
+        en: "Tim rides Yadea: practical intelligence on two wheels",
+        ja: "Timのヤディア試乗が話題に。二輪車のスマート化は実用の時代へ",
+      },
       title: "Tim骑雅迪刷屏 两轮智能不玩噱头了",
       originalTitle: "Tim骑雅迪刷屏 两轮智能不玩噱头了",
       category: "cars",
@@ -1013,6 +1293,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7634055838402923822",
+      titles: {
+        en: "How can one battery last three years?",
+        ja: "一つのバッテリーが、なぜ3年使えるのか？",
+      },
       title: "一颗电池，凭什么能用三年？",
       originalTitle: "一颗电池，凭什么能用三年？",
       category: "digital",
@@ -1027,6 +1311,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7278951589069475107",
+      titles: {
+        en: "A motorcycle that charges in just ten minutes?",
+        ja: "わずか10分で充電できるバイク？",
+      },
       title: "充电只需10分钟，你敢信这是一辆摩托车的充电速度？！",
       originalTitle: "充电只需10分钟，你敢信这是一辆摩托车的充电速度？！",
       category: "cars",
@@ -1041,6 +1329,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7453787428554345728",
+      titles: {
+        en: "Haier at 40: confidence for Chinese companies going global",
+        ja: "ハイアール40年。中国企業の海外進出に与えた自信と決意",
+      },
       title: "海尔40年，给了中国企业出海怎样的信心和决心？",
       originalTitle: "海尔40年，给了中国企业出海怎样的信心和决心？",
       category: "digital",
@@ -1055,6 +1347,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7455129690534186255",
+      titles: {
+        en: "What makes Wanxiang local-dimming TVs stand out?",
+        ja: "万象分区のテレビは、どこがすごいのか？",
+      },
       title: "万象分区的电视机到底牛在了哪里？",
       originalTitle: "万象分区的电视机到底牛在了哪里？",
       category: "digital",
@@ -1069,6 +1365,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7633630044354596147",
+      titles: {
+        en: "I only wanted to relax with my phone. How did I end up here?",
+        ja: "寝転んでスマホを見るつもりが、なぜここに？",
+      },
       title: "本来只想躺着刷个手机，结果给我整到这里来了！",
       originalTitle: "本来只想躺着刷个手机，结果给我整到这里来了！",
       category: "digital",
@@ -1083,6 +1383,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7639686976307825935",
+      titles: {
+        en: "How did one battery change the lives of three kinds of city dwellers?",
+        ja: "一つのバッテリーが、街の3種類の人々をどう変えたのか？",
+      },
       title: "一块电池，怎么改变了一座城市里的3种人？",
       originalTitle: "一块电池，怎么改变了一座城市里的3种人？",
       category: "digital",
@@ -1097,6 +1401,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7546535169352535359",
+      titles: {
+        en: "What would the perfect gaming handheld look like?",
+        ja: "理想の携帯ゲーム機は、どんな形？",
+      },
       title: "一台完美的游戏掌机应该长什么样？你根本想不到！",
       originalTitle: "一台完美的游戏掌机应该长什么样？你根本想不到！",
       category: "digital",
@@ -1111,6 +1419,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7538294840723836206",
+      titles: {
+        en: "Why does Tesla stay all-electric and avoid range extenders and plug-in hybrids?",
+        ja: "テスラはなぜEV一筋で、レンジエクステンダーやプラグインハイブリッドを選ばないのか？",
+      },
       title: "死磕纯电的特斯拉，为何从不考虑增程和插混？",
       originalTitle: "死磕纯电的特斯拉，为何从不考虑增程和插混？",
       category: "cars",
@@ -1125,6 +1437,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7552850574069353762",
+      titles: {
+        en: "A 200,000-yuan SUV: specialist or all-rounder?",
+        ja: "20万元クラスのSUV。得意分野で選ぶか、総合力で選ぶか？",
+      },
       title: "20万级SUV，是选“单科学霸”还是“全能选手”？",
       originalTitle: "20万级SUV，是选“单科学霸”还是“全能选手”？",
       category: "cars",
@@ -1139,6 +1455,10 @@ window.DNM_WORKS = {
     },
     {
       id: "7538811835097681162",
+      titles: {
+        en: "The pen that has stayed with me for more than twenty years",
+        ja: "20年以上、私に寄り添ってくれた一本のペン",
+      },
       title: "那支笔陪了我二十余年",
       originalTitle: "那支笔陪了我二十余年",
       category: "digital",
