@@ -18,6 +18,41 @@
   };
   const translations = {
     zh: {
+      brandHuawei: "华为 ↗",
+      brandByd: "比亚迪 ↗",
+      brandHisense: "海信 ↗",
+      brandMihoyo: "米哈游 ↗",
+      intro: "科创大牛猫 · 把复杂科技讲成好故事",
+      introLink: "认识大牛猫与合作方向 ↗",
+      aboutEyebrow: "认识科创大牛猫",
+      aboutTitle: "从科技现场，到每个人的生活。",
+      aboutBody: "科创大牛猫关注科技与商业，走进展会、体验产品，也拆解技术背后的产业故事。我们从用户的真实问题出发，把复杂技术讲成看得懂、愿意分享的内容。",
+      personaNote: "大牛猫是品牌标识，出镜数字人是作品导览中的视觉角色。展厅画面为 AI 场景演绎；点击作品可回到真实原片。",
+      aboutCta: "聊聊你的内容项目 ↗",
+      factWorks: "本站收录作品",
+      factReach: "米哈游代表作播放",
+      factNote: "作品数据采集于 2026.10.30，非实时数据；最新数值以平台为准。",
+      servicesEyebrow: "从案例开始了解合作",
+      servicesTitle: "你的产品，适合怎样的故事？",
+      serviceField: "现场探访",
+      serviceFieldText: "从展台走到实际体验，让观众看到新技术如何进入生活。",
+      serviceFieldLink: "看探展作品 ↗",
+      serviceCars: "汽车体验",
+      serviceCarsText: "围绕使用场景讲产品，把技术配置转成观众关心的体验。",
+      serviceCarsLink: "看汽车作品 ↗",
+      serviceDigital: "数码与 AI",
+      serviceDigitalText: "通过产品实测与技术解读，说明一项创新究竟带来了什么。",
+      serviceDigitalLink: "看科技作品 ↗",
+      serviceBusiness: "商业故事",
+      serviceBusinessText: "从一个产品或公司出发，解释产业变化与商业选择。",
+      serviceBusinessLink: "看商业作品 ↗",
+      brandsTitle: "在作品里，了解我们讲过的品牌",
+      brandsNote: "以下为片单涉及的品牌。点击查看对应作品，不代表全部属于商业合作。",
+      contactBrief: "添加微信时，请附上品牌或产品、计划发布时间与预算范围，方便我们判断适合的内容形式。",
+      servicesNav: "合作方向",
+      legacyLink: "历史版本",
+      backTop: "回到顶部 ↑",
+
       skip: "跳到主内容",
       navGallery: "作品放映室",
       navField: "走进现场",
@@ -36,7 +71,7 @@
       galleryEyebrow: "回到那些经典瞬间",
       galleryTitle: "好故事，值得再看一次。",
       galleryHint: "点击画面，进入原片",
-      filterAll: "精选",
+      filterAll: "全部",
       filterField: "现场",
       filterCars: "汽车",
       filterDigital: "数码",
@@ -57,7 +92,7 @@
       loadMore: "再看 12 部",
       contactEyebrow: "下一个故事，一起出发",
       contactTitle: "把好科技，讲给更多人听。",
-      contactText: "科技探展 · 汽车体验 · 商业故事",
+      contactText: "品牌定制内容与长期共创，欢迎带着你的产品来聊。",
       wechat: "商务微信",
       copy: "复制微信号",
       profile: "去抖音主页逛逛",
@@ -84,6 +119,41 @@
       pageTitle: "科创大牛猫 · 作品放映室",
     },
     en: {
+      brandHuawei: "Huawei ↗",
+      brandByd: "BYD ↗",
+      brandHisense: "Hisense ↗",
+      brandMihoyo: "miHoYo ↗",
+      intro: "科创大牛猫 · Technology, told through good stories",
+      introLink: "Meet the creator & explore collaborations ↗",
+      aboutEyebrow: "MEET 科创大牛猫",
+      aboutTitle: "From the show floor to everyday life.",
+      aboutBody: "We explore technology and business through exhibitions, hands-on experiences and the industries behind products. Starting with real audience questions, we make complex ideas clear and worth sharing.",
+      personaNote: "The mascot represents the brand; the digital human guides the collection. Gallery images are AI scene interpretations. Each story links to its original video.",
+      aboutCta: "Tell us about your project ↗",
+      factWorks: "Stories in this collection",
+      factReach: "Views of our miHoYo story",
+      factNote: "Snapshot recorded on 30 Oct 2026, not live data. See the platform for current figures.",
+      servicesEyebrow: "EXPLORE THE WORK BEHIND THE OFFER",
+      servicesTitle: "Find the story in your product.",
+      serviceField: "On location",
+      serviceFieldText: "Take audiences beyond the exhibition stand to see how technology fits into daily life.",
+      serviceFieldLink: "Explore field stories ↗",
+      serviceCars: "Car experiences",
+      serviceCarsText: "Translate specifications into the everyday experiences that matter to drivers.",
+      serviceCarsLink: "Explore car stories ↗",
+      serviceDigital: "Tech & AI",
+      serviceDigitalText: "Hands-on experiences and clear explanations of what an innovation actually changes.",
+      serviceDigitalLink: "Explore tech stories ↗",
+      serviceBusiness: "Business stories",
+      serviceBusinessText: "Start with a company or product to explain an industry and its business choices.",
+      serviceBusinessLink: "Explore business stories ↗",
+      brandsTitle: "Explore brands through our stories",
+      brandsNote: "These brands appear in the collection. Inclusion does not imply a paid partnership.",
+      contactBrief: "When adding us on WeChat, include your brand or product, intended release date and budget range so we can discuss a suitable format.",
+      servicesNav: "Collaboration formats",
+      legacyLink: "Historical site",
+      backTop: "Back to top ↑",
+
       skip: "Skip to content",
       navGallery: "Screening room",
       navField: "On location",
@@ -102,7 +172,7 @@
       galleryEyebrow: "REVISIT THE MOMENT",
       galleryTitle: "Good stories deserve another look.",
       galleryHint: "Select an image to watch the original",
-      filterAll: "Selected",
+      filterAll: "All",
       filterField: "On location",
       filterCars: "Cars",
       filterDigital: "Tech",
@@ -123,7 +193,7 @@
       loadMore: "Show 12 more",
       contactEyebrow: "LET’S MAKE THE NEXT STORY",
       contactTitle: "Bring good technology to more people.",
-      contactText: "Technology on location · Cars · Business",
+      contactText: "Custom branded stories and ongoing creative partnerships.",
       wechat: "Business WeChat",
       copy: "Copy WeChat ID",
       profile: "Explore our Douyin",
@@ -151,6 +221,41 @@
       pageTitle: "科创大牛猫 · Screening room",
     },
     ja: {
+      brandHuawei: "Huawei ↗",
+      brandByd: "BYD ↗",
+      brandHisense: "Hisense ↗",
+      brandMihoyo: "miHoYo ↗",
+      intro: "科创大牛猫 · 複雑な技術を、伝わる物語に",
+      introLink: "私たちと制作について ↗",
+      aboutEyebrow: "科创大牛猫について",
+      aboutTitle: "テクノロジーの現場から、日々の暮らしへ。",
+      aboutBody: "展示会の取材や製品体験を通じて、技術とビジネスを伝えます。視聴者の身近な疑問から出発し、複雑な技術を理解しやすく、共有したくなる物語にします。",
+      personaNote: "マスコットはブランドのシンボル、デジタルヒューマンは作品案内のキャラクターです。画像は AI による演出で、各作品から元動画を視聴できます。",
+      aboutCta: "制作について相談する ↗",
+      factWorks: "収録作品数",
+      factReach: "miHoYo代表作品の再生数",
+      factNote: "2026年10月30日取得。リアルタイムの数値ではありません。最新情報は各プラットフォームをご確認ください。",
+      servicesEyebrow: "作品から制作内容を知る",
+      servicesTitle: "製品の魅力を、どんな物語に？",
+      serviceField: "現場取材",
+      serviceFieldText: "展示ブースから実際の体験へ。技術が暮らしにどう関わるかを伝えます。",
+      serviceFieldLink: "取材作品を見る ↗",
+      serviceCars: "自動車体験",
+      serviceCarsText: "技術仕様を、ドライバーが気になる日々の使用体験として伝えます。",
+      serviceCarsLink: "自動車作品を見る ↗",
+      serviceDigital: "テックと AI",
+      serviceDigitalText: "製品体験と技術解説を通じて、イノベーションが変えることを伝えます。",
+      serviceDigitalLink: "テック作品を見る ↗",
+      serviceBusiness: "ビジネスの物語",
+      serviceBusinessText: "製品や企業を起点に、産業の変化と経営の選択を解説します。",
+      serviceBusinessLink: "ビジネス作品を見る ↗",
+      brandsTitle: "作品で紹介したブランド",
+      brandsNote: "収録作品に登場するブランドです。すべてが広告案件であることを意味しません。",
+      contactBrief: "WeChatでご連絡の際は、ブランドや製品、公開予定日、ご予算の目安をお知らせください。適切な制作形式をご相談できます。",
+      servicesNav: "制作について",
+      legacyLink: "過去のサイト",
+      backTop: "トップへ ↑",
+
       skip: "本文へ移動",
       navGallery: "上映室",
       navField: "現場へ",
@@ -169,7 +274,7 @@
       galleryEyebrow: "あの瞬間を、もう一度",
       galleryTitle: "いい物語は、何度でも。",
       galleryHint: "画像をクリックして元動画へ",
-      filterAll: "厳選",
+      filterAll: "すべて",
       filterField: "現場",
       filterCars: "自動車",
       filterDigital: "テック",
@@ -190,7 +295,7 @@
       loadMore: "さらに12作品",
       contactEyebrow: "次の物語を、一緒に",
       contactTitle: "優れた技術を、もっと多くの人へ。",
-      contactText: "テクノロジー取材 · 自動車 · ビジネス",
+      contactText: "ブランド向けの制作と継続的な共同制作をご相談いただけます。",
       wechat: "ビジネス用WeChat",
       copy: "WeChat IDをコピー",
       profile: "Douyinのホームへ",
@@ -275,7 +380,8 @@
     photo.alt = `${titleOf(work)} · ${t("sceneLabel")}`;
     const play = icon("play-circle", 29);
     play.className = "work-play";
-    art.append(photo, play);
+    const scene = element("span", "card-scene", t("sceneLabel"));
+    art.append(photo, play, scene);
     const heading = element("h3");
     const titleLink = videoLink(work);
     titleLink.textContent = titleOf(work);
@@ -322,6 +428,21 @@
     );
     return categoryMatch && (!state.query || haystack.includes(state.query));
   }
+  function syncUrl() {
+    const url = new URL(location.href);
+    if (state.category === "all") url.searchParams.delete("category");
+    else url.searchParams.set("category", state.category);
+    if (state.query) url.searchParams.set("q", state.query);
+    else url.searchParams.delete("q");
+    history.replaceState(null, "", url);
+  }
+  function readFilters() {
+    const params = new URLSearchParams(location.search);
+    state.category = ["field", "cars", "digital", "business"].includes(params.get("category")) ? params.get("category") : "all";
+    state.query = searchText((params.get("q") || "").trim());
+    $("#searchInput").value = params.get("q") || "";
+    state.limit = 12;
+  }
   function render() {
     const results = works.filter(matches);
     const visibleFeatured = featured.filter(matches);
@@ -361,8 +482,9 @@
     );
   }
   function setCategory(category) {
-    state.category = category;
+    state.category = ["all", "field", "cars", "digital", "business"].includes(category) ? category : "all";
     state.limit = 12;
+    syncUrl();
     render();
   }
   function closeMenu() {
@@ -423,6 +545,8 @@
     );
     $("#heroViews").textContent = metric(hero.plays, hero.playValue);
     $("#heroLikes").textContent = metric(hero.likes, hero.likeValue);
+    $("#profileViews").textContent = metric(hero.plays, hero.playValue);
+    $("#collectedCount").textContent = works.length;
     $("#menuToggle").setAttribute(
       "aria-label",
       t($("#mainNav").classList.contains("is-open") ? "menuClose" : "menuOpen"),
@@ -444,6 +568,7 @@
   );
   $("#searchInput").addEventListener("input", (event) => {
     state.query = searchText(event.target.value.trim());
+    syncUrl();
     state.limit = 12;
     render();
   });
@@ -480,6 +605,15 @@
       t(open ? "menuClose" : "menuOpen"),
     );
   });
+  $$("[data-category-link]").forEach((link) => link.addEventListener("click", (event) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    state.query = ""; $("#searchInput").value = "";
+    setCategory(link.dataset.categoryLink);
+    location.hash = "gallery";
+    $("#gallery").scrollIntoView({behavior: "instant"});
+    closeMenu();
+  }));
   $$("#mainNav a").forEach((link) =>
     link.addEventListener("click", () => {
       if (link.dataset.categoryLink) {
@@ -555,5 +689,27 @@
   } catch (_) {
     /* Storage is optional. */
   }
+  readFilters();
+  window.addEventListener("popstate", () => {
+    const previous = `${state.category}|${state.query}`;
+    readFilters();
+    if (previous !== `${state.category}|${state.query}`) render();
+  });
+  window.addEventListener("load", () => {
+    const target = document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView({behavior:"instant"});
+  });
+  const sections = [$("#gallery"), $("#about"), $("#contact")];
+  function updateNavigation() {
+    const active = sections.reduce((current, section) => section.getBoundingClientRect().top <= 150 ? section.id : current, "gallery");
+    $$("#mainNav a").forEach(link => {
+      const selected = link.hash === `#${active}`;
+      link.classList.toggle("active", selected);
+      if (selected) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  }
+  window.addEventListener("scroll", updateNavigation, {passive:true});
   applyLanguage(initialLang);
+  updateNavigation();
 })();
