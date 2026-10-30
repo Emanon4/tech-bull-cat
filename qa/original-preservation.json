@@ -1,0 +1,18 @@
+{
+  "baseCommit": "5950658a9745629a9afa1c92fe3f5cd0eb6c6d31",
+  "originalMainSHA256": "8b39aed11e72e2c33b72588cadda0eb3cc64a8047261bcaef1422c997b36ea48",
+  "preservedMainSHA256": "8b39aed11e72e2c33b72588cadda0eb3cc64a8047261bcaef1422c997b36ea48",
+  "sections": [
+    "stats",
+    "about",
+    "content",
+    "works",
+    "value",
+    "brands",
+    "follow",
+    "contact"
+  ],
+  "originalCSSPreserved": true,
+  "originalJSPreserved": true,
+  "originalMainByteIdentical": true
+}

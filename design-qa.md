@@ -81,3 +81,16 @@ final result: passed
 - [x] 本地预览保持运行并向用户提供地址。
 
 final result: passed
+
+
+## 账号介绍集成补充验收
+
+按用户补充要求，首页仍是作品放映室，新增「账号介绍」入口打开原官网。`about.html` 的 `<main>` 与原 main 分支提交 `5950658a9745629a9afa1c92fe3f5cd0eb6c6d31` 逐字一致，SHA-256 均为 `8b39aed11e72e2c33b72588cadda0eb3cc64a8047261bcaef1422c997b36ea48`；原 CSS 与 JS 也原样保存。见 [保留校验](qa/original-preservation.json)。
+
+浏览器确认原站 8 个板块都存在，原来的 3 张作品封面与 7 张二维码保留。首页到账号介绍、账号介绍返回首页均实际点击通过，手机菜单入口也通过。两个页面共享语言偏好。两套页面分别复测 320 / 390 / 768 / 1120 与中／英／日共 24 个组合，均无横向溢出，检测时同时确认实际 CSS viewport 宽度，见 [集成记录](qa/profile-integration.json)。
+
+新增页面的数字与联系方式是原版口径，页面顶部已说明；当前商务入口可返回新首页。正文和原有功能没有删减，也没有套用新画廊的 CSS / JS。
+
+画廊新入口的 [同图对照](qa/gallery-profile-comparison.jpg) 已检查：增加账号介绍选项，其余布局及卡片保持本轮验收结果。原站保留页的源图和截图见 [对照](qa/profile-comparison.jpg)，新增的顶栏与说明使原内容下移，不能把两页顶部的绝对 y 差当成内容丢失。
+
+final result: passed

@@ -1,0 +1,216 @@
+{
+  "sections": [
+    {
+      "hash": "#stats",
+      "heading": "全网数据墙"
+    },
+    {
+      "hash": "#contact",
+      "heading": "一起做点酷的"
+    },
+    {
+      "hash": "#content",
+      "heading": "内容遍及"
+    },
+    {
+      "hash": "#works",
+      "heading": "代表作品"
+    },
+    {
+      "hash": "#value",
+      "heading": "品牌为什么选大牛猫"
+    },
+    {
+      "hash": "#brands",
+      "heading": "合作品牌墙"
+    },
+    {
+      "hash": "#follow",
+      "heading": "关注大牛猫"
+    },
+    {
+      "hash": "#contact",
+      "heading": "一起做点酷的"
+    }
+  ],
+  "aboutRetest": {
+    "hash": "#about",
+    "passed": true
+  },
+  "profileResponsive": [
+    {
+      "bridgeOverflow": false,
+      "lang": "zh",
+      "overflow": false,
+      "sections": 8,
+      "title": "科创大牛猫 · 账号介绍",
+      "width": 320
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "en",
+      "overflow": false,
+      "sections": 8,
+      "title": "Tech Bull Cat · Profile",
+      "width": 320
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "ja",
+      "overflow": false,
+      "sections": 8,
+      "title": "科創大牛猫 · プロフィール",
+      "width": 320
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "zh",
+      "overflow": false,
+      "sections": 8,
+      "title": "科创大牛猫 · 账号介绍",
+      "width": 390
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "en",
+      "overflow": false,
+      "sections": 8,
+      "title": "Tech Bull Cat · Profile",
+      "width": 390
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "ja",
+      "overflow": false,
+      "sections": 8,
+      "title": "科創大牛猫 · プロフィール",
+      "width": 390
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "zh",
+      "overflow": false,
+      "sections": 8,
+      "title": "科创大牛猫 · 账号介绍",
+      "width": 768
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "en",
+      "overflow": false,
+      "sections": 8,
+      "title": "Tech Bull Cat · Profile",
+      "width": 768
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "ja",
+      "overflow": false,
+      "sections": 8,
+      "title": "科創大牛猫 · プロフィール",
+      "width": 768
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "zh",
+      "overflow": false,
+      "sections": 8,
+      "title": "科创大牛猫 · 账号介绍",
+      "width": 1120
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "en",
+      "overflow": false,
+      "sections": 8,
+      "title": "Tech Bull Cat · Profile",
+      "width": 1120
+    },
+    {
+      "bridgeOverflow": false,
+      "lang": "ja",
+      "overflow": false,
+      "sections": 8,
+      "title": "科創大牛猫 · プロフィール",
+      "width": 1120
+    }
+  ],
+  "galleryNavChecks": [
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 320
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 320
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 320
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 390
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 390
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 390
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 768
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 768
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 768
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 1120
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 1120
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "profileHref": "about.html",
+      "width": 1120
+    }
+  ],
+  "mainToProfile": true,
+  "profileToMain": true,
+  "mobileMenuToProfile": true,
+  "languageSharedAcrossPages": true
+}

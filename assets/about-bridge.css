@@ -1,0 +1,41 @@
+/* Navigation between the new gallery and the intact original website. */
+.site-switch {
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 0 clamp(16px, 4vw, 40px);
+  background: #0e0e12;
+  border-bottom: 1px solid #34343f;
+  font: 14px/1.4 Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+.site-switch a { min-height: 44px; display: flex; align-items: center; }
+.site-switch__back { gap: 9px; color: #f5efe6; }
+.site-switch__back img { transform: rotate(180deg); filter: brightness(0) invert(1); }
+.site-switch__current { color: #ff8a4c; font-weight: 700; }
+.site-switch__contact { margin-left: auto; color: #c8c2b9; }
+.site-switch a:hover { color: #ff8a4c; }
+.site-archive-note {
+  padding: 11px clamp(16px, 4vw, 40px);
+  background: #17171d;
+  color: #bdb6ab;
+  border-bottom: 1px solid #34343f;
+  font: 12px/1.7 Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+.nav { top: 48px; }
+html { scroll-padding-top: 155px; }
+@media (max-width: 560px) {
+  .site-switch { gap: 14px; font-size: 12px; }
+  .site-switch__back { gap: 6px; }
+  .site-switch__back img { width: 16px; height: 16px; }
+  .site-archive-note { font-size: 11px; }
+  html { scroll-padding-top: 205px; }
+}
+@media (max-width: 359px) {
+  .site-switch { gap: 10px; font-size: 11px; padding-inline: 12px; }
+}

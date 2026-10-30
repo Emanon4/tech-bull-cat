@@ -1,0 +1,90 @@
+{
+  "all200": true,
+  "checked": 21,
+  "resources": [
+    {
+      "path": "about.html",
+      "status": 200
+    },
+    {
+      "path": "assets/about-bridge.css",
+      "status": 200
+    },
+    {
+      "path": "assets/about-bridge.js",
+      "status": 200
+    },
+    {
+      "path": "assets/bgm.mp3",
+      "status": 200
+    },
+    {
+      "path": "assets/favicon.png",
+      "status": 200
+    },
+    {
+      "path": "assets/icons/arrow-right.svg",
+      "status": 200
+    },
+    {
+      "path": "assets/legacy-main.js",
+      "status": 200
+    },
+    {
+      "path": "assets/legacy-style.css",
+      "status": 200
+    },
+    {
+      "path": "assets/mascot.png",
+      "status": 200
+    },
+    {
+      "path": "assets/mascot128.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/p_bili.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/p_douyin.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/p_kuaishou.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/p_xhs.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/v_chip.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/v_mate70.png",
+      "status": 200
+    },
+    {
+      "path": "assets/qr/v_mihoyo.png",
+      "status": 200
+    },
+    {
+      "path": "assets/works/chip.jpg",
+      "status": 200
+    },
+    {
+      "path": "assets/works/mate70.jpg",
+      "status": 200
+    },
+    {
+      "path": "assets/works/mihoyo.jpg",
+      "status": 200
+    },
+    {
+      "path": "assets/zpix-subset.woff2",
+      "status": 200
+    }
+  ]
+}
