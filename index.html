@@ -36,13 +36,13 @@
       imagesrcset="assets/gallery/mihoyo-studio-720.jpg 720w, assets/gallery/mihoyo-studio.jpg 1536w"
       imagesizes="(max-width: 760px) 100vw, 65vw"
     />
-    <link rel="stylesheet" href="assets/style.css?v=20261030" />
+    <link rel="stylesheet" href="assets/style.css?v=20261030-unified" />
     <script defer src="assets/works-data.js?v=20261030-i18n2"></script>
-    <script defer src="assets/main.js?v=20261030-i18n2"></script>
+    <script defer src="assets/main.js?v=20261030-unified"></script>
   </head>
-  <body>
+  <body id="top">
     <a class="skip" href="#main" data-i18n="skip">跳到主内容</a>
-    <header class="header" id="top">
+    <header class="header">
       <a class="brand" href="#top" aria-label="科创大牛猫 首页"
         ><img src="assets/mascot128.png" width="48" height="48" alt="" /><span
           >科创大牛猫</span
@@ -60,9 +60,7 @@
       </button>
       <nav class="nav" id="mainNav" aria-label="主导航">
         <a class="active" href="#gallery" data-i18n="navGallery">作品放映室</a
-        ><a href="#gallery" data-category-link="field" data-i18n="navField"
-          >走进现场</a
-        ><a href="about.html" data-i18n="navProfile">账号介绍</a
+        ><a href="#about" data-i18n="navProfile">账号介绍</a
         ><a href="#contact" data-i18n="navContact">合作</a>
       </nav>
       <p class="tagline" data-i18n="tagline">让一部分科技先酷起来</p>
@@ -92,6 +90,10 @@
       </div>
     </header>
     <main id="main">
+      <section class="site-intro" aria-label="科创大牛猫">
+        <p data-i18n="intro">科创大牛猫 · 把复杂科技讲成好故事</p>
+        <a href="#about" class="intro-link" data-i18n="introLink">认识大牛猫与合作方向 ↗</a>
+      </section>
       <section class="feature" aria-labelledby="heroTitle">
         <a
           class="feature-art"
@@ -190,7 +192,7 @@
               aria-pressed="true"
               data-i18n="filterAll"
             >
-              精选</button
+              全部</button
             ><button
               type="button"
               data-filter="field"
@@ -318,6 +320,21 @@
           </p></noscript
         >
       </section>
+      <section class="about-section section" id="about" aria-labelledby="aboutTitle">
+        <div class="about-heading"><div><p class="eyebrow" data-i18n="aboutEyebrow">认识科创大牛猫</p><h2 id="aboutTitle" data-i18n="aboutTitle">从科技现场，到每个人的生活。</h2></div><img src="assets/mascot128.png" width="80" height="80" alt="科创大牛猫品牌形象" loading="lazy"></div>
+        <div class="about-columns"><div><p class="about-lead" data-i18n="aboutBody">科创大牛猫关注科技与商业，走进展会、体验产品，也拆解技术背后的产业故事。我们从用户的真实问题出发，把复杂技术讲成看得懂、愿意分享的内容。</p><p class="muted" data-i18n="personaNote">大牛猫是品牌标识，出镜数字人是作品导览中的视觉角色。展厅画面为 AI 场景演绎；点击作品可回到真实原片。</p><a class="text-button" href="#contact" data-i18n="aboutCta">聊聊你的内容项目 ↗</a></div>
+        <div class="profile-facts"><dl><div><dt data-i18n="factWorks">本站收录作品</dt><dd id="collectedCount">80</dd></div></dl><dl><div><dt data-i18n="factReach">米哈游代表作播放</dt><dd id="profileViews">1164.1万</dd></div></dl><p data-i18n="factNote">作品数据采集于 2026.10.30，非实时数据；最新数值以平台为准。</p></div></div>
+      </section>
+      <section class="services section" id="services" aria-labelledby="servicesTitle">
+        <div class="section-heading"><div><p class="eyebrow" data-i18n="servicesEyebrow">从案例开始了解合作</p><h2 id="servicesTitle" data-i18n="servicesTitle">你的产品，适合怎样的故事？</h2></div></div>
+        <div class="service-grid">
+          <a class="service-card" href="?category=field#gallery" data-category-link="field"><span class="service-number">01</span><h3 data-i18n="serviceField">现场探访</h3><p data-i18n="serviceFieldText">从展台走到实际体验，让观众看到新技术如何进入生活。</p><span class="service-link" data-i18n="serviceFieldLink">看探展作品 ↗</span></a>
+          <a class="service-card" href="?category=cars#gallery" data-category-link="cars"><span class="service-number">02</span><h3 data-i18n="serviceCars">汽车体验</h3><p data-i18n="serviceCarsText">围绕使用场景讲产品，把技术配置转成观众关心的体验。</p><span class="service-link" data-i18n="serviceCarsLink">看汽车作品 ↗</span></a>
+          <a class="service-card" href="?category=digital#gallery" data-category-link="digital"><span class="service-number">03</span><h3 data-i18n="serviceDigital">数码与 AI</h3><p data-i18n="serviceDigitalText">通过产品实测与技术解读，说明一项创新究竟带来了什么。</p><span class="service-link" data-i18n="serviceDigitalLink">看科技作品 ↗</span></a>
+          <a class="service-card" href="?category=business#gallery" data-category-link="business"><span class="service-number">04</span><h3 data-i18n="serviceBusiness">商业故事</h3><p data-i18n="serviceBusinessText">从一个产品或公司出发，解释产业变化与商业选择。</p><span class="service-link" data-i18n="serviceBusinessLink">看商业作品 ↗</span></a>
+        </div>
+        <div class="brand-context" id="brands"><h3 data-i18n="brandsTitle">在作品里，了解我们讲过的品牌</h3><p class="muted" data-i18n="brandsNote">以下为片单涉及的品牌。点击查看对应作品，不代表全部属于商业合作。</p><div class="brand-links"><a href="?q=华为#gallery" data-i18n="brandHuawei">华为 ↗</a><a href="?q=仰望#gallery" data-i18n="brandYangwang">仰望 ↗</a><a href="?q=深蓝#gallery" data-i18n="brandDeepal">深蓝 ↗</a><a href="?q=米哈游#gallery" data-i18n="brandMihoyo">米哈游 ↗</a></div></div>
+      </section>
       <section
         class="contact section"
         id="contact"
@@ -328,7 +345,7 @@
           <h2 id="contactTitle" data-i18n="contactTitle">
             把好科技，讲给更多人听。
           </h2>
-          <p data-i18n="contactText">科技探展 · 汽车体验 · 商业故事</p>
+          <p data-i18n="contactText">品牌定制内容与长期共创，欢迎带着你的产品来聊。</p><p class="contact-brief" data-i18n="contactBrief">添加微信时，请附上品牌或产品、计划发布时间与预算范围，方便我们判断适合的内容形式。</p>
         </div>
         <div class="contact-actions">
           <button class="contact-button" id="copyContact" type="button">
@@ -364,7 +381,7 @@
           ></a
         >
         <p data-i18n="tagline">让一部分科技先酷起来</p>
-        <div class="platforms">
+        <div class="platforms" id="follow">
           <a
             href="https://www.kuaishou.com/profile/3xjujmy5s7rjd3u"
             target="_blank"
@@ -401,7 +418,7 @@
           背景音乐：关
         </button>
       </div>
-      <p class="music-credit">Music: Sunny Afternoon · HoliznaCC0 · CC0</p>
+      <div class="footer-links"><a href="#about" data-i18n="navProfile">账号介绍</a><a href="#services" data-i18n="servicesNav">合作方向</a><a href="legacy.html" data-i18n="legacyLink">历史版本</a><a href="#top" data-i18n="backTop">回到顶部 ↑</a></div><p class="music-credit">Music: Sunny Afternoon · HoliznaCC0 · CC0</p>
     </footer>
     <audio id="audio" loop preload="none" src="assets/bgm.mp3"></audio>
     <dialog
