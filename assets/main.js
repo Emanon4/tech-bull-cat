@@ -19,8 +19,8 @@
   const translations = {
     zh: {
       brandHuawei: "华为 ↗",
-      brandByd: "比亚迪 ↗",
-      brandHisense: "海信 ↗",
+      brandYangwang: "仰望 ↗",
+      brandDeepal: "深蓝 ↗",
       brandMihoyo: "米哈游 ↗",
       intro: "科创大牛猫 · 把复杂科技讲成好故事",
       introLink: "认识大牛猫与合作方向 ↗",
@@ -120,8 +120,8 @@
     },
     en: {
       brandHuawei: "Huawei ↗",
-      brandByd: "BYD ↗",
-      brandHisense: "Hisense ↗",
+      brandYangwang: "YANGWANG ↗",
+      brandDeepal: "Deepal ↗",
       brandMihoyo: "miHoYo ↗",
       intro: "科创大牛猫 · Technology, told through good stories",
       introLink: "Meet the creator & explore collaborations ↗",
@@ -222,8 +222,8 @@
     },
     ja: {
       brandHuawei: "Huawei ↗",
-      brandByd: "BYD ↗",
-      brandHisense: "Hisense ↗",
+      brandYangwang: "YANGWANG ↗",
+      brandDeepal: "Deepal ↗",
       brandMihoyo: "miHoYo ↗",
       intro: "科创大牛猫 · 複雑な技術を、伝わる物語に",
       introLink: "私たちと制作について ↗",
