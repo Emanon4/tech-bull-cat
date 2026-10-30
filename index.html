@@ -1,356 +1,442 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>科创大牛猫 · 让一部分科技先酷起来</title>
-<meta name="description" content="科创大牛猫 · 全网 700 万+ 粉丝的科技 × 商业 × AI 内容品牌。抖音创作者学院合作讲师，深耕 AI、新能源汽车、3C 数码、商业洞察与探展直击。品牌合作 vx：O_p-xiang。">
-<meta name="theme-color" content="#0E0E12">
-<link rel="icon" type="image/png" href="assets/favicon.png?v=2">
-<!-- 建议后续另备 1200×630 横图作 og:image / twitter:image -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://emanon4.github.io/tech-bull-cat/">
-<meta property="og:title" content="科创大牛猫 · 让一部分科技先酷起来">
-<meta property="og:description" content="全网 700 万+ 粉丝的科技 × 商业 × AI 内容品牌。一次投放，8 倍裂变，全域轰炸。">
-<meta property="og:image" content="https://emanon4.github.io/tech-bull-cat/assets/mascot128.png?v=2">
-<meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css?v=2">
-</head>
-<body>
-<a class="skip" href="#main" data-i18n="a11y.skip">跳到主内容</a>
-<div class="crt" aria-hidden="true"></div>
-<div class="grid-bg" aria-hidden="true"></div>
-
-<!-- ============ NAV ============ -->
-<header class="nav" id="top">
-  <a class="nav__brand" href="#top" aria-label="科创大牛猫">
-    <img class="nav__avatar" src="assets/mascot.png?v=2" alt="" width="40" height="40">
-    <span class="nav__name" data-i18n="brand.name">科创大牛猫</span>
-  </a>
-  <nav class="nav__links" aria-label="主导航">
-    <a href="#stats" data-i18n="nav.stats">数据</a>
-    <a href="#about" data-i18n="nav.about">关于</a>
-    <a href="#content" data-i18n="nav.content">内容</a>
-    <a href="#works" data-i18n="nav.works">作品</a>
-    <a href="#value" data-i18n="nav.value">价值</a>
-    <a href="#brands" data-i18n="nav.brands">品牌</a>
-    <a href="#follow" data-i18n="nav.follow">矩阵</a>
-    <a href="#contact" data-i18n="nav.contact">合作</a>
-  </nav>
-  <div class="nav__tools">
-    <div class="lang" role="group" aria-label="Language / 语言">
-      <button data-lang="zh" class="is-active" type="button" lang="zh" aria-pressed="true" aria-label="中文">中</button>
-      <button data-lang="en" type="button" lang="en" aria-pressed="false" aria-label="English">EN</button>
-      <button data-lang="ja" type="button" lang="ja" aria-pressed="false" aria-label="日本語">日</button>
-    </div>
-    <button class="bgm" id="bgm" type="button" aria-pressed="false" aria-label="背景音乐开关">
-      <span class="bgm__ico" aria-hidden="true">♪</span>
-    </button>
-  </div>
-</header>
-
-<main id="main">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="hero__inner">
-      <div class="hero__art">
-        <div class="mascot">
-          <img src="assets/mascot128.png?v=2" alt="科创大牛猫 —— 半猫半牛的像素吉祥物" width="220" height="220">
-          <span class="mascot__ring" aria-hidden="true"></span>
-        </div>
-      </div>
-      <div class="hero__copy">
-        <p class="eyebrow" data-i18n="hero.eyebrow">TECH-INNOVATION</p>
-        <span class="badge" data-i18n="hero.badge">抖音创作者学院 · 合作讲师</span>
-        <h1 class="hero__title"><span data-i18n="brand.name">科创大牛猫</span></h1>
-        <p class="hero__tag" data-i18n="hero.tagline">让一部分科技先酷起来！</p>
-        <p class="hero__sub" data-i18n="hero.sub">全网 700 万+ 粉丝的科技 × 商业 × AI 内容品牌</p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#works"><span data-i18n="hero.cta1">看代表作</span></a>
-          <a class="btn btn--ghost" href="#contact"><span data-i18n="hero.cta2">商务合作</span></a>
-        </div>
-        <p class="hero__start blink" data-i18n="hero.start">▼ PRESS START ▼</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ STATS ============ -->
-  <section class="sec" id="stats">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="stats.eyebrow">DATA · 数据面板</p>
-      <h2 class="sec__title" data-i18n="stats.title">全网数据墙</h2>
-    </div>
-    <div class="stats">
-      <div class="stat stat--hero panel">
-        <div class="stat__num" data-count="700" data-suffix="万+" data-i18n="stats.totalN">700万+</div>
-        <div class="stat__label" data-i18n="stats.total">全网总粉丝</div>
-      </div>
-      <ul class="stat-grid">
-        <li class="panel stat-cell"><span class="sc__plat" data-i18n="st.dy">抖音</span><span class="sc__num" data-i18n="st.dyN">351.4万</span><span class="sc__bar"><b style="--w:100%"></b></span></li>
-        <li class="panel stat-cell"><span class="sc__plat" data-i18n="st.ks">快手</span><span class="sc__num" data-i18n="st.ksN">300万+</span><span class="sc__bar"><b style="--w:85%"></b></span></li>
-        <li class="panel stat-cell"><span class="sc__plat" data-i18n="st.tt">今日头条</span><span class="sc__num" data-i18n="st.ttN">19万+</span><span class="sc__bar"><b style="--w:30%"></b></span></li>
-        <li class="panel stat-cell"><span class="sc__plat" data-i18n="st.xhs">小红书</span><span class="sc__num" data-i18n="st.xhsN">5.8万</span><span class="sc__bar"><b style="--w:22%"></b></span></li>
-        <li class="panel stat-cell"><span class="sc__plat" data-i18n="st.sph">视频号</span><span class="sc__num" data-i18n="st.sphN">3万+</span><span class="sc__bar"><b style="--w:18%"></b></span></li>
-        <li class="panel stat-cell"><span class="sc__plat" data-i18n="st.more">微博 · 支付宝</span><span class="sc__num" data-i18n="st.run">运营中</span><span class="sc__bar"><b style="--w:14%"></b></span></li>
-      </ul>
-    </div>
-    <div class="stat-extra">
-      <div class="chip"><b data-i18n="stats.likesN">5735.3万</b><span data-i18n="stats.likes">抖音累计获赞</span></div>
-      <div class="chip"><b data-i18n="stats.worksN">241</b><span data-i18n="stats.works">抖音作品数</span></div>
-      <div class="chip"><b data-i18n="stats.maxN">1163万</b><span data-i18n="stats.max">单条最高播放</span></div>
-    </div>
-    <p class="slogan-strip"><span data-i18n="stats.slogan">一次投放 · 8 倍裂变 · 全域轰炸</span></p>
-    <p class="note" data-i18n="stats.note">数据综合各平台公开主页：抖音为实时数据，其余为官方招商口径，以平台官方为准。</p>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="sec sec--alt" id="about">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="about.eyebrow">PROFILE · 角色档案</p>
-      <h2 class="sec__title" data-i18n="about.title">优质科技 &amp; 商业内容品牌</h2>
-    </div>
-    <div class="about">
-      <div class="about__text">
-        <p data-i18n="about.body">让您的产品在科技浪潮中脱颖而出、深入人心。科创大牛猫深耕全球科技动态、新能源汽车、人工智能与商业洞察，把复杂技术讲成用户爱看的故事。</p>
-        <div class="tags">
-          <span class="tag" data-i18n="about.t1">IP 属地 · 广东深圳</span>
-          <span class="tag" data-i18n="about.t2">数码博主</span>
-          <span class="tag" data-i18n="about.t3">抖音学院合作讲师</span>
-        </div>
-      </div>
-      <figure class="hex">
-        <figcaption class="hex__title" data-i18n="about.hexTitle">六边形战士 · 满级技能</figcaption>
-        <svg viewBox="0 0 240 240" role="img" aria-label="六边形战士技能雷达：可混剪、可出镜、可直播、可实测、可探展、可急单，全部满级">
-          <polygon class="hex__grid" points="120,18 208,69 208,171 120,222 32,171 32,69"></polygon>
-          <polygon class="hex__grid" points="120,69 164,94.5 164,145.5 120,171 76,145.5 76,94.5"></polygon>
-          <polygon class="hex__fill" points="120,26 201,73 201,167 120,214 39,167 39,73"></polygon>
-          <g class="hex__axis"><line x1="120" y1="120" x2="120" y2="18"/><line x1="120" y1="120" x2="208" y2="69"/><line x1="120" y1="120" x2="208" y2="171"/><line x1="120" y1="120" x2="120" y2="222"/><line x1="120" y1="120" x2="32" y2="171"/><line x1="120" y1="120" x2="32" y2="69"/></g>
-        </svg>
-        <ul class="hex__labels">
-          <li style="--i:0" data-i18n="hex.1">可混剪</li>
-          <li style="--i:1" data-i18n="hex.2">可出镜</li>
-          <li style="--i:2" data-i18n="hex.3">可直播</li>
-          <li style="--i:3" data-i18n="hex.4">可实测</li>
-          <li style="--i:4" data-i18n="hex.5">可探展</li>
-          <li style="--i:5" data-i18n="hex.6">可急单</li>
-        </ul>
-        <p class="hex__note" data-i18n="about.hexNote">一人成军 · 全链路自产</p>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ============ CONTENT ============ -->
-  <section class="sec" id="content">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="content.eyebrow">STAGES · 内容关卡</p>
-      <h2 class="sec__title" data-i18n="content.title">内容遍及</h2>
-    </div>
-    <div class="cards">
-      <article class="panel card">
-        <svg class="card__ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" shape-rendering="crispEdges" aria-hidden="true">
-          <path d="M8 1V3 M3.5 3.5H12.5V11.5H3.5V3.5 M6 6.5H7 M9 6.5H10 M6 9.5H10"/>
-        </svg>
-        <h3 data-i18n="c1.t">人工智能 &amp; 机器人</h3>
-        <p data-i18n="c1.d">AI 工具实测、隐形产业链拆解、机器人前沿动态。</p>
-      </article>
-      <article class="panel card">
-        <svg class="card__ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" shape-rendering="crispEdges" aria-hidden="true">
-          <path d="M9 1 L4 9 H7 L6.5 15 L12 6 H9 L9 1Z"/>
-        </svg>
-        <h3 data-i18n="c2.t">新能源汽车 &amp; 3C 数码</h3>
-        <p data-i18n="c2.d">新车实测、手机芯片、智能硬件与智能家电。</p>
-      </article>
-      <article class="panel card">
-        <svg class="card__ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" shape-rendering="crispEdges" aria-hidden="true">
-          <path d="M2 14H14 M4 14V10H6V14 M8 14V7H10V14 M12 14V4H14V14 M11 4L13 2 M11 2H13V4"/>
-        </svg>
-        <h3 data-i18n="c3.t">商业洞察 &amp; 科创投资</h3>
-        <p data-i18n="c3.d">财报拆解、行业内幕、产业趋势与投资视角。</p>
-      </article>
-      <article class="panel card">
-        <svg class="card__ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" shape-rendering="crispEdges" aria-hidden="true">
-          <path d="M2 6H14V11H2V6Z M5 8H7 M6 7V9 M10.5 8H11.5 M12 9H13"/>
-        </svg>
-        <h3 data-i18n="c4.t">游戏评测 &amp; 探展直击</h3>
-        <p data-i18n="c4.d">游戏厂商解读，CES · MWC · AWE · 世界机器人大会现场。</p>
-      </article>
-    </div>
-    <p class="content-tags" data-i18n="content.tags">全球科技动态 · 国产替代 · 中国智造出海 · 智能家电</p>
-  </section>
-
-  <!-- ============ WORKS ============ -->
-  <section class="sec sec--alt" id="works">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="works.eyebrow">WORKS · 爆款卡带</p>
-      <h2 class="sec__title" data-i18n="works.title">代表作品</h2>
-      <p class="sec__lead" data-i18n="works.lead">真实数据 · 点击或微信长按二维码，直达抖音原片。</p>
-    </div>
-    <div class="works">
-      <a class="panel work" href="https://v.douyin.com/WeYpG-ywB4M/" target="_blank" rel="noopener" aria-label="作品：一颗芯片和它的热血故事，390.0万播放，新窗口打开">
-        <span class="work__cover"><img src="assets/works/chip.jpg?v=3" alt="一颗芯片和它的热血故事 封面" loading="lazy"></span>
-        <span class="work__tags"><span class="work__tag" data-i18n="wk.1tag">华为 · 芯片</span></span>
-        <span class="work__title" data-i18n="wk.1t">一颗芯片和它的热血故事</span>
-        <span class="work__foot">
-          <span class="work__stat" data-i18n="wk.1stat">▶ 378.2万　❤ 8.6万</span>
-          <span class="work__qr"><img src="assets/qr/v_chip.png?v=2" alt="扫码看视频" width="58" height="58" loading="lazy"><i data-i18n="work.scan">长按看片</i></span>
-        </span>
-      </a>
-      <a class="panel work" href="https://v.douyin.com/i1YeHHDtzqM/" target="_blank" rel="noopener" aria-label="作品：1年营收300亿，米哈游有多赚钱，1164万播放，新窗口打开">
-        <span class="work__cover"><img src="assets/works/mihoyo.jpg?v=3" alt="印钞机米哈游的逆袭 封面" loading="lazy"></span>
-        <span class="work__tags"><span class="work__tag" data-i18n="wk.2tag">米哈游 · 商业</span><span class="work__tag work__tag--hot" data-i18n="wk.hot">最高播放</span></span>
-        <span class="work__title" data-i18n="wk.2t">1 年营收 300 亿，印钞机米哈游的逆袭</span>
-        <span class="work__foot">
-          <span class="work__stat" data-i18n="wk.2stat">▶ 1163万　❤ 10.9万</span>
-          <span class="work__qr"><img src="assets/qr/v_mihoyo.png?v=2" alt="扫码看视频" width="58" height="58" loading="lazy"><i data-i18n="work.scan">长按看片</i></span>
-        </span>
-      </a>
-      <a class="panel work" href="https://v.douyin.com/4o_baHnazpw/" target="_blank" rel="noopener" aria-label="作品：Mate70 麒麟芯片，又要让美国彻夜难眠，162.0万播放，新窗口打开">
-        <span class="work__cover"><img src="assets/works/mate70.jpg?v=3" alt="被美国穷追不舍的麒麟芯片 封面" loading="lazy"></span>
-        <span class="work__tags"><span class="work__tag" data-i18n="wk.3tag">华为 · 麒麟</span></span>
-        <span class="work__title" data-i18n="wk.3t">Mate70 麒麟芯片，又要让美国彻夜难眠</span>
-        <span class="work__foot">
-          <span class="work__stat" data-i18n="wk.3stat">▶ 158.4万　❤ 4.1万</span>
-          <span class="work__qr"><img src="assets/qr/v_mate70.png?v=2" alt="扫码看视频" width="58" height="58" loading="lazy"><i data-i18n="work.scan">长按看片</i></span>
-        </span>
-      </a>
-    </div>
-    <div class="more">
-      <p class="more__title" data-i18n="works.moreTitle">更多高赞内容</p>
-      <ul class="more__list">
-        <li><span data-i18n="wk.m1">深扒 AI 隐形产业链</span><b data-i18n="wk.m1k">❤ 1.2万</b></li>
-        <li><span data-i18n="wk.m2">全网梦境接龙 · 让 AI 可视化你的梦</span><b data-i18n="wk.m2k">❤ 2.1万</b></li>
-        <li><span data-i18n="wk.m3">中央空调实测 · 国产凭什么反超日系</span><b data-i18n="wk.m3k">❤ 1.2万</b></li>
-        <li><span data-i18n="wk.m4">一块电池，改变了城市的三种人</span><b data-i18n="wk.m4k">❤ 2.0万</b></li>
-        <li><span data-i18n="wk.m5">世界顶刊为何签下中国 AI</span><b data-i18n="wk.m5k">❤ 1.3万</b></li>
-        <li><span data-i18n="wk.m6">腾讯游戏大战网易，你觉得谁会赢</span><b data-i18n="wk.m6k">❤ 5.8万</b></li>
-      </ul>
-      <a class="btn btn--ghost more__all" href="https://v.douyin.com/FBFvHm3LguQ/" target="_blank" rel="noopener"><span data-i18n="works.all">前往抖音主页看全部 →</span></a>
-    </div>
-  </section>
-
-  <!-- ============ VALUE ============ -->
-  <section class="sec" id="value">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="value.eyebrow">BUFFS · 商单价值</p>
-      <h2 class="sec__title" data-i18n="value.title">品牌为什么选大牛猫</h2>
-    </div>
-    <div class="cards cards--4">
-      <article class="panel buff"><span class="buff__k">01</span><h3 data-i18n="v1.t">用户视角</h3><p data-i18n="v1.d">把复杂技术，转成用户易懂、爱看的内容。</p></article>
-      <article class="panel buff"><span class="buff__k">02</span><h3 data-i18n="v2.t">人文关怀</h3><p data-i18n="v2.d">挖掘产品 / 技术背后与用户的情感连接。</p></article>
-      <article class="panel buff"><span class="buff__k">03</span><h3 data-i18n="v3.t">形象直观</h3><p data-i18n="v3.d">用视频表现，让卖点与内涵深入人心。</p></article>
-      <article class="panel buff"><span class="buff__k">04</span><h3 data-i18n="v4.t">共情能力</h3><p data-i18n="v4.d">激发观众的共鸣与价值认同。</p></article>
-    </div>
-    <p class="types-title" data-i18n="value.typesTitle">商单类型</p>
-    <ul class="types">
-      <li data-i18n="ty.1">新能源 / 3C 成功案例</li>
-      <li data-i18n="ty.2">科技深度评测</li>
-      <li data-i18n="ty.3">品宣系列</li>
-      <li data-i18n="ty.4">长期品牌合作</li>
-      <li data-i18n="ty.5">品牌深度定制</li>
-    </ul>
-  </section>
-
-  <!-- ============ BRANDS ============ -->
-  <section class="sec sec--alt" id="brands">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="brands.eyebrow">PARTNERS · 合作品牌</p>
-      <h2 class="sec__title" data-i18n="brands.title">合作品牌墙</h2>
-    </div>
-    <div class="tier">
-      <span class="tier__lv" data-i18n="brands.t1">第一梯队</span>
-      <div class="tier__row tier__row--1">
-        <span class="plate">华为</span><span class="plate">比亚迪</span><span class="plate">问界</span>
-      </div>
-    </div>
-    <div class="tier">
-      <span class="tier__lv" data-i18n="brands.t2">第二梯队</span>
-      <div class="tier__row tier__row--2">
-        <span class="plate">中国移动</span><span class="plate">长城</span><span class="plate">深蓝</span><span class="plate">仰望</span>
-      </div>
-    </div>
-    <div class="tier">
-      <span class="tier__lv" data-i18n="brands.t3">更多伙伴</span>
-      <div class="tier__row tier__row--3">
-        <span class="plate">海信</span><span class="plate">荣耀</span><span class="plate">零跑</span><span class="plate">蔚来</span><span class="plate">特斯拉</span><span class="plate">雅迪</span><span class="plate">Redmi</span><span class="plate">三星</span><span class="plate">TCL</span><span class="plate">海尔</span><span class="plate">朴朴</span><span class="plate">福特林肯</span><span class="plate">凯迪拉克</span><span class="plate">宝马</span><span class="plate">别克</span><span class="plate">魏牌</span>
-      </div>
-    </div>
-    <p class="note" data-i18n="brands.note">以上为历史合作 / 案例涉及品牌，具体以实际项目为准。</p>
-  </section>
-
-  <!-- ============ PLATFORMS ============ -->
-  <section class="sec" id="follow">
-    <div class="sec__head">
-      <p class="eyebrow" data-i18n="follow.eyebrow">CHANNELS · 全域矩阵</p>
-      <h2 class="sec__title" data-i18n="follow.title">关注大牛猫</h2>
-      <p class="sec__lead" data-i18n="follow.scan">微信内长按二维码，即可一键关注。</p>
-    </div>
-    <div class="plats">
-      <a class="panel plat plat--main" href="https://v.douyin.com/FBFvHm3LguQ/" target="_blank" rel="noopener" aria-label="抖音 科创大牛猫 主页，新窗口打开">
-        <span class="plat__head">
-          <span class="plat__name">抖音</span>
-          <span class="plat__id">kcdaniumao</span>
-          <span class="plat__num" data-i18n="follow.dyN">351.4万</span>
-        </span>
-        <span class="plat__qr"><img src="assets/qr/p_douyin.png?v=2" alt="抖音二维码" width="76" height="76" loading="lazy"></span>
-        <span class="plat__badge" data-i18n="follow.main">主阵地</span>
-      </a>
-      <a class="panel plat" href="https://www.kuaishou.com/profile/3xjujmy5s7rjd3u" target="_blank" rel="noopener" aria-label="快手主页，新窗口打开">
-        <span class="plat__head"><span class="plat__name">快手</span><span class="plat__num" data-i18n="follow.ksN">300万+</span></span>
-        <span class="plat__qr"><img src="assets/qr/p_kuaishou.png?v=2" alt="快手二维码" width="76" height="76" loading="lazy"></span>
-      </a>
-      <a class="panel plat" href="https://www.xiaohongshu.com/user/profile/5be12ed373b00b00019720ae" target="_blank" rel="noopener" aria-label="小红书主页，新窗口打开">
-        <span class="plat__head"><span class="plat__name">小红书</span><span class="plat__id">564664964</span><span class="plat__num" data-i18n="follow.xhsN">5.8万</span></span>
-        <span class="plat__qr"><img src="assets/qr/p_xhs.png?v=2" alt="小红书二维码" width="76" height="76" loading="lazy"></span>
-      </a>
-      <a class="panel plat" href="https://space.bilibili.com/385938457" target="_blank" rel="noopener" aria-label="哔哩哔哩主页，新窗口打开">
-        <span class="plat__head"><span class="plat__name">哔哩哔哩</span><span class="plat__num" data-i18n="follow.run">运营中</span></span>
-        <span class="plat__qr"><img src="assets/qr/p_bili.png?v=2" alt="哔哩哔哩二维码" width="76" height="76" loading="lazy"></span>
-      </a>
-      <a class="panel plat" href="https://www.toutiao.com/c/user/token/CigOFY0NaehNR-f90SySuB4EGu_2X77axUFl7mqmRJTa4TfqJOEJn1w-GkkKPAAAAAAAAAAAAABPyiiZNib5x8LjpQleTt0syWHmQLKb8YjTnICcvRaFobzAYMwyKNj3PjvSkjt_afYW6xDyo4MOGMPFg-oEIgEDB036AQ==/" target="_blank" rel="noopener" aria-label="今日头条主页，新窗口打开">
-        <span class="plat__head"><span class="plat__name">今日头条</span><span class="plat__num" data-i18n="follow.ttN">19万+</span></span>
-      </a>
-      <div class="panel plat plat--soft">
-        <span class="plat__head"><span class="plat__name" data-i18n="follow.more">视频号 · 微博 · 支付宝</span><span class="plat__num" data-i18n="follow.run2">全域覆盖</span></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="sec sec--cta" id="contact">
-    <div class="cta-box panel">
-      <p class="eyebrow" data-i18n="contact.eyebrow">CONTACT · 商务合作</p>
-      <h2 class="cta-box__title" data-i18n="contact.title">一起做点酷的</h2>
-      <p class="cta-box__body" data-i18n="contact.body">品牌投放、产品实测、探展直播、长期共创 —— 六边形战士，可急单。一次投放，8 倍裂变，全域轰炸。</p>
-      <div class="wx">
-        <span class="wx__label" data-i18n="contact.wxLabel">商务合作微信</span>
-        <button class="wx__id" id="copyWx" type="button" data-wx="O_p-xiang">
-          <span class="wx__code">O_p-xiang</span>
-          <span class="wx__copy" data-i18n="contact.copy">点击复制</span>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>科创大牛猫 · 作品放映室</title>
+    <meta
+      name="description"
+      content="走进科创大牛猫的作品放映室。用数字人重访科技现场，在经典瞬间里发现好故事。点击画面观看对应原片。商务微信：qianpai857。"
+    />
+    <meta name="theme-color" content="#0e0e12" />
+    <link rel="canonical" href="https://emanon4.github.io/tech-bull-cat/" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://emanon4.github.io/tech-bull-cat/"
+    />
+    <meta property="og:title" content="科创大牛猫 · 作品放映室" />
+    <meta
+      property="og:description"
+      content="让一部分科技先酷起来。数字人重访经典，点击画面观看原片。"
+    />
+    <meta
+      property="og:image"
+      content="https://emanon4.github.io/tech-bull-cat/assets/gallery/mihoyo-studio.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/gallery/mihoyo-studio.jpg"
+      imagesrcset="assets/gallery/mihoyo-studio-720.jpg 720w, assets/gallery/mihoyo-studio.jpg 1536w"
+      imagesizes="(max-width: 760px) 100vw, 65vw"
+    />
+    <link rel="stylesheet" href="assets/style.css?v=20261030" />
+    <script defer src="assets/works-data.js?v=20261030"></script>
+    <script defer src="assets/main.js?v=20261030"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main" data-i18n="skip">跳到主内容</a>
+    <header class="header" id="top">
+      <a class="brand" href="#top" aria-label="科创大牛猫 首页"
+        ><img src="assets/mascot128.png" width="48" height="48" alt="" /><span
+          >科创大牛猫</span
+        ></a
+      >
+      <button
+        class="icon-button menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="打开导航"
+      >
+        <img src="assets/icons/list.svg" width="24" height="24" alt="" />
+      </button>
+      <nav class="nav" id="mainNav" aria-label="主导航">
+        <a class="active" href="#gallery" data-i18n="navGallery">作品放映室</a
+        ><a href="#gallery" data-category-link="field" data-i18n="navField"
+          >走进现场</a
+        ><a href="#contact" data-i18n="navContact">合作</a>
+      </nav>
+      <p class="tagline" data-i18n="tagline">让一部分科技先酷起来</p>
+      <div class="languages" role="group" aria-label="Language / 语言">
+        <button
+          type="button"
+          data-lang="zh"
+          aria-pressed="true"
+          aria-label="中文"
+        >
+          中</button
+        ><button
+          type="button"
+          data-lang="en"
+          aria-pressed="false"
+          aria-label="English"
+        >
+          EN</button
+        ><button
+          type="button"
+          data-lang="ja"
+          aria-pressed="false"
+          aria-label="日本語"
+        >
+          日
         </button>
       </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="foot">
-  <div class="foot__brand">
-    <img src="assets/mascot.png?v=2" alt="" width="32" height="32">
-    <span>TECH-INNOVATION</span>
-  </div>
-  <p class="foot__copy" data-i18n="foot.copy">© 2026 科创大牛猫 · 让一部分科技先酷起来</p>
-  <p class="foot__music" data-i18n="foot.music">背景音乐：Sunny Afternoon · HoliznaCC0（CC0 公共领域）</p>
-  <p class="foot__note" data-i18n="foot.note">数据来自各平台公开主页，以平台官方为准。本站为内容介绍与商务合作用途。</p>
-  <a class="foot__top" href="#top" data-i18n="foot.top">▲ 回到顶部</a>
-</footer>
-
-<audio id="audio" loop preload="none" src="assets/bgm.mp3"></audio>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="assets/main.js?v=3"></script>
-</body>
+    </header>
+    <main id="main">
+      <section class="feature" aria-labelledby="heroTitle">
+        <a
+          class="feature-art"
+          id="heroArt"
+          href="https://www.douyin.com/video/7292720570997722387"
+          target="_self"
+          rel="noopener noreferrer"
+          aria-label="观看原片：米哈游的商业世界"
+          ><img
+            class="feature-photo"
+            src="assets/gallery/mihoyo-studio.jpg"
+            srcset="
+              assets/gallery/mihoyo-studio-720.jpg  720w,
+              assets/gallery/mihoyo-studio.jpg     1536w
+            "
+            sizes="(max-width: 760px) 100vw, 65vw"
+            width="1536"
+            height="1024"
+            fetchpriority="high"
+            alt="数字人身穿藏蓝西装和米白针织衫，在游戏创作工作室观察模型"
+          /><span class="scene-label" data-i18n="sceneLabel"
+            >数字人场景演绎</span
+          ></a
+        >
+        <div class="feature-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">经典代表</p>
+          <h1 id="heroTitle">
+            <span data-i18n="heroLine1">米哈游的</span><br /><span
+              data-i18n="heroLine2"
+              >商业世界</span
+            >
+          </h1>
+          <p class="feature-description" data-i18n="heroDescription">
+            从产品创意到全球市场，拆解米哈游如何用内容和技术，打造触动全球玩家的商业故事。
+          </p>
+          <div class="feature-metrics">
+            <span
+              ><span data-i18n="views">播放</span>
+              <strong id="heroViews">1164.1万</strong></span
+            ><span
+              ><span data-i18n="likes">点赞</span>
+              <strong id="heroLikes">10.9万</strong></span
+            >
+          </div>
+          <div class="feature-actions">
+            <a
+              class="primary-button"
+              href="https://www.douyin.com/video/7292720570997722387"
+              target="_self"
+              rel="noopener noreferrer"
+              ><img
+                src="assets/icons/play-circle.svg"
+                width="26"
+                height="26"
+                alt="" /><span data-i18n="watch">观看原片</span
+              ><img
+                src="assets/icons/arrow-right.svg"
+                width="22"
+                height="22"
+                alt="" /></a
+            ><button
+              class="icon-button hero-qr"
+              type="button"
+              data-qr="7292720570997722387"
+              aria-label="打开米哈游原片二维码"
+            >
+              <img
+                src="assets/icons/qr-code.svg"
+                width="24"
+                height="24"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="gallery section"
+        id="gallery"
+        aria-labelledby="galleryTitle"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="galleryEyebrow">回到那些经典瞬间</p>
+            <h2 id="galleryTitle" data-i18n="galleryTitle">
+              好故事，值得再看一次。
+            </h2>
+          </div>
+          <p class="section-hint" data-i18n="galleryHint">点击画面，进入原片</p>
+        </div>
+        <div class="gallery-tools">
+          <div class="filters" role="group" aria-label="作品分类">
+            <button
+              type="button"
+              data-filter="all"
+              aria-pressed="true"
+              data-i18n="filterAll"
+            >
+              精选</button
+            ><button
+              type="button"
+              data-filter="field"
+              aria-pressed="false"
+              data-i18n="filterField"
+            >
+              现场</button
+            ><button
+              type="button"
+              data-filter="cars"
+              aria-pressed="false"
+              data-i18n="filterCars"
+            >
+              汽车</button
+            ><button
+              type="button"
+              data-filter="digital"
+              aria-pressed="false"
+              data-i18n="filterDigital"
+            >
+              数码</button
+            ><button
+              type="button"
+              data-filter="business"
+              aria-pressed="false"
+              data-i18n="filterBusiness"
+            >
+              商业
+            </button>
+          </div>
+          <label class="search"
+            ><img
+              src="assets/icons/magnifying-glass.svg"
+              width="19"
+              height="19"
+              alt="" /><span class="sr-only" data-i18n="searchLabel"
+              >搜索作品</span
+            ><input
+              id="searchInput"
+              type="search"
+              placeholder="搜索品牌、车型或主题"
+              autocomplete="off"
+          /></label>
+        </div>
+        <p
+          class="result-status"
+          id="resultStatus"
+          role="status"
+          aria-live="polite"
+        ></p>
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <h3 data-i18n="emptyTitle">还没有找到这段故事</h3>
+          <p data-i18n="emptyText">换个关键词，或回到全部作品看看。</p>
+          <button
+            class="text-button"
+            id="resetFilters"
+            type="button"
+            data-i18n="reset"
+          >
+            查看全部作品
+          </button>
+        </div>
+        <button
+          class="explore-button"
+          id="exploreButton"
+          type="button"
+          aria-controls="archive"
+          aria-expanded="false"
+        >
+          <span data-i18n="explore">继续浏览经典作品</span
+          ><img
+            src="assets/icons/arrow-right.svg"
+            width="23"
+            height="23"
+            alt=""
+          />
+        </button>
+        <section
+          class="archive"
+          id="archive"
+          aria-labelledby="archiveTitle"
+          hidden
+        >
+          <div class="archive-heading">
+            <div>
+              <p class="eyebrow" data-i18n="archiveEyebrow">
+                更多值得回看的作品
+              </p>
+              <h3 id="archiveTitle" data-i18n="archiveTitle">经典片单</h3>
+            </div>
+            <label class="sort"
+              ><span class="sr-only" data-i18n="sortLabel">作品排序</span
+              ><select id="sortSelect">
+                <option value="curated" data-i18n="sortCurated">
+                  策展顺序
+                </option>
+                <option value="plays" data-i18n="sortPlays">
+                  播放量从高到低
+                </option>
+                <option value="likes" data-i18n="sortLikes">
+                  点赞从高到低
+                </option>
+              </select></label
+            >
+          </div>
+          <div class="archive-list" id="archiveList"></div>
+          <button
+            class="text-button load-more"
+            id="loadMore"
+            type="button"
+            data-i18n="loadMore"
+          >
+            再看 12 部
+          </button>
+        </section>
+        <noscript
+          ><p>
+            开启 JavaScript 浏览完整片单，或<a
+              href="https://www.douyin.com/user/MS4wLjABAAAAuiQPSt1dmEFPGlYPgRWG032GF7F1-8LV4pWbPKtOFdI"
+              target="_blank"
+              rel="noopener noreferrer"
+              >前往抖音主页观看全部作品</a
+            >。
+          </p></noscript
+        >
+      </section>
+      <section
+        class="contact section"
+        id="contact"
+        aria-labelledby="contactTitle"
+      >
+        <div>
+          <p class="eyebrow" data-i18n="contactEyebrow">下一个故事，一起出发</p>
+          <h2 id="contactTitle" data-i18n="contactTitle">
+            把好科技，讲给更多人听。
+          </h2>
+          <p data-i18n="contactText">科技探展 · 汽车体验 · 商业故事</p>
+        </div>
+        <div class="contact-actions">
+          <button class="contact-button" id="copyContact" type="button">
+            <span
+              ><small data-i18n="wechat">商务微信</small
+              ><strong>qianpai857</strong></span
+            ><img
+              src="assets/icons/copy.svg"
+              width="23"
+              height="23"
+              alt=""
+            /><span class="sr-only" data-i18n="copy">复制微信号</span></button
+          ><a
+            class="profile-link"
+            href="https://www.douyin.com/user/MS4wLjABAAAAuiQPSt1dmEFPGlYPgRWG032GF7F1-8LV4pWbPKtOFdI"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-i18n="profile">去抖音主页逛逛</span
+            ><img
+              src="assets/icons/arrow-up-right.svg"
+              width="18"
+              height="18"
+              alt=""
+          /></a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer section">
+      <div class="footer-top">
+        <a class="brand brand-small" href="#top"
+          ><img src="assets/mascot128.png" width="34" height="34" alt="" /><span
+            >科创大牛猫</span
+          ></a
+        >
+        <p data-i18n="tagline">让一部分科技先酷起来</p>
+        <div class="platforms">
+          <a
+            href="https://www.kuaishou.com/profile/3xjujmy5s7rjd3u"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="kuaishou"
+            >快手</a
+          ><a
+            href="https://www.xiaohongshu.com/user/profile/5be12ed373b00b00019720ae"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="rednote"
+            >小红书</a
+          ><a
+            href="https://space.bilibili.com/385938457"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="bilibili"
+            >哔哩哔哩</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="sourceNote">
+          画面为数字人场景演绎，对应原片入口；播放与点赞数据采集于
+          2026.10.30，以平台显示为准。
+        </p>
+        <button
+          class="music-button"
+          id="musicButton"
+          type="button"
+          aria-pressed="false"
+          data-i18n="musicOff"
+        >
+          背景音乐：关
+        </button>
+      </div>
+      <p class="music-credit">Music: Sunny Afternoon · HoliznaCC0 · CC0</p>
+    </footer>
+    <audio id="audio" loop preload="none" src="assets/bgm.mp3"></audio>
+    <dialog
+      id="qrDialog"
+      aria-labelledby="qrTitle"
+      aria-describedby="qrDescription"
+    >
+      <button
+        class="icon-button dialog-close"
+        id="closeDialog"
+        type="button"
+        aria-label="关闭二维码"
+      >
+        <img src="assets/icons/x.svg" width="23" height="23" alt="" />
+      </button>
+      <p class="eyebrow" data-i18n="qrEyebrow">继续观看</p>
+      <h2 id="qrTitle"></h2>
+      <img
+        class="qr-image"
+        id="qrImage"
+        width="264"
+        height="264"
+        alt="该作品的抖音二维码"
+      />
+      <p id="qrDescription" data-i18n="qrDescription">
+        扫码或在微信中长按识别二维码，观看对应原片。
+      </p>
+      <a
+        class="primary-button"
+        id="qrOriginalLink"
+        target="_self"
+        rel="noopener noreferrer"
+        data-i18n="watch"
+        >观看原片</a
+      >
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  </body>
 </html>

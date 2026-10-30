@@ -1,0 +1,193 @@
+{
+  "categories": [
+    {
+      "archive": true,
+      "cards": 3,
+      "selected": "field",
+      "status": "共 24 部作品 · 数据采集于 2026.10.30"
+    },
+    {
+      "archive": true,
+      "cards": 3,
+      "selected": "cars",
+      "status": "共 20 部作品 · 数据采集于 2026.10.30"
+    },
+    {
+      "archive": true,
+      "cards": 1,
+      "selected": "digital",
+      "status": "共 22 部作品 · 数据采集于 2026.10.30"
+    },
+    {
+      "archive": true,
+      "cards": 1,
+      "selected": "business",
+      "status": "共 14 部作品 · 数据采集于 2026.10.30"
+    },
+    {
+      "archive": false,
+      "cards": 8,
+      "selected": "all",
+      "status": "共 80 部作品 · 数据采集于 2026.10.30"
+    }
+  ],
+  "archive": [
+    {
+      "count": 12,
+      "more": true
+    },
+    {
+      "count": 24,
+      "more": true
+    },
+    {
+      "count": 36,
+      "more": true
+    },
+    {
+      "count": 48,
+      "more": true
+    },
+    {
+      "count": 60,
+      "more": true
+    },
+    {
+      "count": 72,
+      "more": false
+    }
+  ],
+  "finalResponsive": [
+    {
+      "headerHeight": 76,
+      "lang": "zh-CN",
+      "overflow": false,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "headerHeight": 76,
+      "lang": "en",
+      "overflow": false,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "headerHeight": 76,
+      "lang": "ja",
+      "overflow": false,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "headerHeight": 76,
+      "lang": "zh-CN",
+      "overflow": false,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "headerHeight": 76,
+      "lang": "en",
+      "overflow": false,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "headerHeight": 76,
+      "lang": "ja",
+      "overflow": false,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "headerHeight": 77.3984375,
+      "lang": "zh-CN",
+      "overflow": false,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "headerHeight": 77.3984375,
+      "lang": "en",
+      "overflow": false,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "headerHeight": 77.3984375,
+      "lang": "ja",
+      "overflow": false,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "headerHeight": 94,
+      "lang": "zh-CN",
+      "overflow": false,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "headerHeight": 94,
+      "lang": "en",
+      "overflow": false,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "headerHeight": 94,
+      "lang": "ja",
+      "overflow": false,
+      "scrollWidth": 1440,
+      "width": 1440
+    }
+  ],
+  "search": {
+    "keyword": "芯片",
+    "results": 3,
+    "emptyState": true,
+    "reset": true
+  },
+  "qr": {
+    "escape": true,
+    "buttonClose": true,
+    "backdropClose": true,
+    "focusReturn": true
+  },
+  "languagePersistence": true,
+  "clipboardSuccess": true,
+  "music": {
+    "played": true,
+    "readyState": 4,
+    "error": null,
+    "pausedAfterToggle": true
+  },
+  "videoSamples": [
+    {
+      "id": "7323511047669796123",
+      "creator": "科创大牛猫",
+      "readyState": 4,
+      "paused": false,
+      "currentTime": 61.701312
+    },
+    {
+      "id": "7458291156707724595",
+      "creator": "科创大牛猫",
+      "readyState": 4,
+      "paused": false,
+      "currentTime": 55.690289
+    },
+    {
+      "id": "7493118041857854757",
+      "creator": "科创大牛猫",
+      "readyState": 4,
+      "paused": false,
+      "currentTime": 105.535421
+    }
+  ],
+  "keyboard": {
+    "skipLink": true,
+    "searchShortcut": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "observedResponsive": [
+    {
+      "brokenImages": 0,
+      "columns": "327px 327px 327px 327px",
+      "headerHeight": 94,
+      "menu": false,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "brokenImages": 0,
+      "columns": "228px 228px 228px",
+      "headerHeight": 77.3984375,
+      "menu": false,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "brokenImages": 0,
+      "columns": "173px 173px",
+      "headerHeight": 76,
+      "menu": true,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "brokenImages": 0,
+      "columns": "138px 138px",
+      "headerHeight": 117,
+      "menu": true,
+      "scrollWidth": 320,
+      "width": 320
+    }
+  ],
+  "japanese320Before": {
+    "scrollWidth": 346,
+    "viewportWidth": 320,
+    "overflowingControl": "ビジネス filter"
+  }
+}

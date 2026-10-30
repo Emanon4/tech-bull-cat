@@ -1,0 +1,15 @@
+{
+  "works": 80,
+  "uniqueIds": 80,
+  "featured": 8,
+  "sceneImages": 9,
+  "qrFiles": 80,
+  "localReferences": 15,
+  "categories": {
+    "field": 24,
+    "cars": 20,
+    "digital": 22,
+    "business": 14
+  },
+  "status": "passed"
+}
