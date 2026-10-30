@@ -692,8 +692,10 @@
   readFilters();
   window.addEventListener("popstate", () => {
     const previous = `${state.category}|${state.query}`;
+    const previousLimit = state.limit;
     readFilters();
     if (previous !== `${state.category}|${state.query}`) render();
+    else state.limit = previousLimit;
   });
   window.addEventListener("load", () => {
     const target = document.getElementById(location.hash.slice(1));
