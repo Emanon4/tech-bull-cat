@@ -1,9 +1,9 @@
 (() => {
   'use strict';
   const copy = {
-    zh: {gallery:'作品放映室',profile:'账号介绍',contact:'商务合作',note:'原官网完整保留。数据与联系方式沿用原版，当前合作信息请查看作品放映室。',title:'科创大牛猫 · 账号介绍'},
-    en: {gallery:'Screening room',profile:'Profile',contact:'Collaborate',note:'The original website is preserved in full. Figures and contact details follow the original version; visit the screening room for current collaboration details.',title:'Tech Bull Cat · Profile'},
-    ja: {gallery:'作品上映室',profile:'プロフィール',contact:'お問い合わせ',note:'旧公式サイトをそのまま保存しています。数値と連絡先は当時のものです。現在のお問い合わせ先は作品上映室をご覧ください。',title:'科創大牛猫 · プロフィール'}
+    zh: {gallery:'作品放映室',profile:'历史版本',contact:'商务合作',note:'历史版本存档：本页数据与联系方式仅作历史记录。当前介绍与商务合作请返回官网。',title:'科创大牛猫 · 历史版本'},
+    en: {gallery:'Screening room',profile:'Historical site',contact:'Collaborate',note:'Historical archive: figures and contact details on this page are historical records. Return to the main website for the current profile and business contact.',title:'Tech Bull Cat · Historical archive'},
+    ja: {gallery:'作品上映室',profile:'過去のサイト',contact:'お問い合わせ',note:'過去のサイトの記録です。数値と連絡先は当時のものです。現在のプロフィールとお問い合わせ先は公式サイトをご覧ください。',title:'科創大牛猫 · 過去のサイト'}
   };
   function apply(lang) {
     const value = copy[lang] || copy.zh;
