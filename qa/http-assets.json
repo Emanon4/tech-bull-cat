@@ -1,0 +1,576 @@
+{
+  "checked": 114,
+  "all200": true,
+  "resources": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10492
+    },
+    {
+      "path": "assets/style.css",
+      "status": 200,
+      "bytes": 17308
+    },
+    {
+      "path": "assets/main.js",
+      "status": 200,
+      "bytes": 19253
+    },
+    {
+      "path": "assets/works-data.js",
+      "status": 200,
+      "bytes": 31402
+    },
+    {
+      "path": "assets/bgm.mp3",
+      "status": 200,
+      "bytes": 1382733
+    },
+    {
+      "path": "assets/gallery/liauto-chassis-720.jpg",
+      "status": 200,
+      "bytes": 117259
+    },
+    {
+      "path": "assets/gallery/yangwang-technology-720.jpg",
+      "status": 200,
+      "bytes": 116652
+    },
+    {
+      "path": "assets/gallery/game-battle.jpg",
+      "status": 200,
+      "bytes": 436433
+    },
+    {
+      "path": "assets/gallery/yangwang-technology.jpg",
+      "status": 200,
+      "bytes": 395767
+    },
+    {
+      "path": "assets/gallery/mwc-glasses.jpg",
+      "status": 200,
+      "bytes": 366149
+    },
+    {
+      "path": "assets/gallery/ces-hisense.jpg",
+      "status": 200,
+      "bytes": 502650
+    },
+    {
+      "path": "assets/gallery/chip-story.jpg",
+      "status": 200,
+      "bytes": 417091
+    },
+    {
+      "path": "assets/gallery/ciie-materials.jpg",
+      "status": 200,
+      "bytes": 394811
+    },
+    {
+      "path": "assets/gallery/mihoyo-studio-720.jpg",
+      "status": 200,
+      "bytes": 127208
+    },
+    {
+      "path": "assets/gallery/deepblue-driving.jpg",
+      "status": 200,
+      "bytes": 349925
+    },
+    {
+      "path": "assets/gallery/chip-story-720.jpg",
+      "status": 200,
+      "bytes": 124892
+    },
+    {
+      "path": "assets/gallery/liauto-chassis.jpg",
+      "status": 200,
+      "bytes": 397536
+    },
+    {
+      "path": "assets/gallery/deepblue-driving-720.jpg",
+      "status": 200,
+      "bytes": 105366
+    },
+    {
+      "path": "assets/gallery/game-battle-720.jpg",
+      "status": 200,
+      "bytes": 139999
+    },
+    {
+      "path": "assets/gallery/ciie-materials-720.jpg",
+      "status": 200,
+      "bytes": 119417
+    },
+    {
+      "path": "assets/gallery/ces-hisense-720.jpg",
+      "status": 200,
+      "bytes": 159456
+    },
+    {
+      "path": "assets/gallery/mihoyo-studio.jpg",
+      "status": 200,
+      "bytes": 393315
+    },
+    {
+      "path": "assets/gallery/mwc-glasses-720.jpg",
+      "status": 200,
+      "bytes": 111386
+    },
+    {
+      "path": "assets/qr/works/7538294840723836206.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7515274801225780492.png",
+      "status": 200,
+      "bytes": 466
+    },
+    {
+      "path": "assets/qr/works/7278951589069475107.png",
+      "status": 200,
+      "bytes": 471
+    },
+    {
+      "path": "assets/qr/works/7570342501706468627.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7432240535462563124.png",
+      "status": 200,
+      "bytes": 481
+    },
+    {
+      "path": "assets/qr/works/7591340278062140672.png",
+      "status": 200,
+      "bytes": 482
+    },
+    {
+      "path": "assets/qr/works/7639686976307825935.png",
+      "status": 200,
+      "bytes": 481
+    },
+    {
+      "path": "assets/qr/works/7455254071977594146.png",
+      "status": 200,
+      "bytes": 481
+    },
+    {
+      "path": "assets/qr/works/7567418011297058102.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7680498507207265586.png",
+      "status": 200,
+      "bytes": 482
+    },
+    {
+      "path": "assets/qr/works/7550582758981111074.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7310522529993575730.png",
+      "status": 200,
+      "bytes": 466
+    },
+    {
+      "path": "assets/qr/works/7643761355895475492.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7621378240086691108.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7546535169352535359.png",
+      "status": 200,
+      "bytes": 469
+    },
+    {
+      "path": "assets/qr/works/7453787428554345728.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7297907987966938378.png",
+      "status": 200,
+      "bytes": 484
+    },
+    {
+      "path": "assets/qr/works/7617097116460158249.png",
+      "status": 200,
+      "bytes": 482
+    },
+    {
+      "path": "assets/qr/works/7613448426792946953.png",
+      "status": 200,
+      "bytes": 475
+    },
+    {
+      "path": "assets/qr/works/7547631077276339502.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7655901385078213942.png",
+      "status": 200,
+      "bytes": 481
+    },
+    {
+      "path": "assets/qr/works/7685581495372696872.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7577737142961458442.png",
+      "status": 200,
+      "bytes": 467
+    },
+    {
+      "path": "assets/qr/works/7274548309895826748.png",
+      "status": 200,
+      "bytes": 473
+    },
+    {
+      "path": "assets/qr/works/7484217029222747403.png",
+      "status": 200,
+      "bytes": 467
+    },
+    {
+      "path": "assets/qr/works/7617073833547222315.png",
+      "status": 200,
+      "bytes": 470
+    },
+    {
+      "path": "assets/qr/works/7670434284355718442.png",
+      "status": 200,
+      "bytes": 480
+    },
+    {
+      "path": "assets/qr/works/7618611135398432038.png",
+      "status": 200,
+      "bytes": 477
+    },
+    {
+      "path": "assets/qr/works/7633717899143695635.png",
+      "status": 200,
+      "bytes": 469
+    },
+    {
+      "path": "assets/qr/works/7273799885126749476.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7313858002933583116.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7551686980648652084.png",
+      "status": 200,
+      "bytes": 477
+    },
+    {
+      "path": "assets/qr/works/7681240293936614696.png",
+      "status": 200,
+      "bytes": 489
+    },
+    {
+      "path": "assets/qr/works/7307170263957916962.png",
+      "status": 200,
+      "bytes": 480
+    },
+    {
+      "path": "assets/qr/works/7350927790004276530.png",
+      "status": 200,
+      "bytes": 466
+    },
+    {
+      "path": "assets/qr/works/7292720570997722387.png",
+      "status": 200,
+      "bytes": 468
+    },
+    {
+      "path": "assets/qr/works/7696107004040842538.png",
+      "status": 200,
+      "bytes": 482
+    },
+    {
+      "path": "assets/qr/works/7323511047669796123.png",
+      "status": 200,
+      "bytes": 469
+    },
+    {
+      "path": "assets/qr/works/7493118041857854757.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7562117700835724559.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7499106691326266643.png",
+      "status": 200,
+      "bytes": 483
+    },
+    {
+      "path": "assets/qr/works/7634394607274478894.png",
+      "status": 200,
+      "bytes": 474
+    },
+    {
+      "path": "assets/qr/works/7605931087985986825.png",
+      "status": 200,
+      "bytes": 479
+    },
+    {
+      "path": "assets/qr/works/7688918683472727346.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7680887531939892507.png",
+      "status": 200,
+      "bytes": 480
+    },
+    {
+      "path": "assets/qr/works/7458291156707724595.png",
+      "status": 200,
+      "bytes": 473
+    },
+    {
+      "path": "assets/qr/works/7572417851991149839.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7633430566947409162.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7548713323148135730.png",
+      "status": 200,
+      "bytes": 480
+    },
+    {
+      "path": "assets/qr/works/7552850574069353762.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7585444365854657792.png",
+      "status": 200,
+      "bytes": 469
+    },
+    {
+      "path": "assets/qr/works/7453433695844814118.png",
+      "status": 200,
+      "bytes": 485
+    },
+    {
+      "path": "assets/qr/works/7566471905494977818.png",
+      "status": 200,
+      "bytes": 479
+    },
+    {
+      "path": "assets/qr/works/7698647977732164914.png",
+      "status": 200,
+      "bytes": 479
+    },
+    {
+      "path": "assets/qr/works/7538811835097681162.png",
+      "status": 200,
+      "bytes": 472
+    },
+    {
+      "path": "assets/qr/works/7598503331039907082.png",
+      "status": 200,
+      "bytes": 476
+    },
+    {
+      "path": "assets/qr/works/7506374742333492514.png",
+      "status": 200,
+      "bytes": 470
+    },
+    {
+      "path": "assets/qr/works/7225513169857301816.png",
+      "status": 200,
+      "bytes": 475
+    },
+    {
+      "path": "assets/qr/works/7668935813262036287.png",
+      "status": 200,
+      "bytes": 475
+    },
+    {
+      "path": "assets/qr/works/7455129690534186255.png",
+      "status": 200,
+      "bytes": 469
+    },
+    {
+      "path": "assets/qr/works/7691179309868443365.png",
+      "status": 200,
+      "bytes": 470
+    },
+    {
+      "path": "assets/qr/works/7633630044354596147.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7458240816067185960.png",
+      "status": 200,
+      "bytes": 484
+    },
+    {
+      "path": "assets/qr/works/7688188169451261199.png",
+      "status": 200,
+      "bytes": 480
+    },
+    {
+      "path": "assets/qr/works/7287890869150076171.png",
+      "status": 200,
+      "bytes": 476
+    },
+    {
+      "path": "assets/qr/works/7655204929866599707.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7676870114851048747.png",
+      "status": 200,
+      "bytes": 473
+    },
+    {
+      "path": "assets/qr/works/7583612755786173702.png",
+      "status": 200,
+      "bytes": 482
+    },
+    {
+      "path": "assets/qr/works/7341379343005863177.png",
+      "status": 200,
+      "bytes": 475
+    },
+    {
+      "path": "assets/qr/works/7645253065548860710.png",
+      "status": 200,
+      "bytes": 486
+    },
+    {
+      "path": "assets/qr/works/7372497342827597108.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7674841247256694059.png",
+      "status": 200,
+      "bytes": 481
+    },
+    {
+      "path": "assets/qr/works/7305338756100295990.png",
+      "status": 200,
+      "bytes": 471
+    },
+    {
+      "path": "assets/qr/works/7537515274505964826.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/qr/works/7664160046368034083.png",
+      "status": 200,
+      "bytes": 470
+    },
+    {
+      "path": "assets/qr/works/7510170429919726911.png",
+      "status": 200,
+      "bytes": 469
+    },
+    {
+      "path": "assets/qr/works/7431874261544947007.png",
+      "status": 200,
+      "bytes": 479
+    },
+    {
+      "path": "assets/qr/works/7686439158071577875.png",
+      "status": 200,
+      "bytes": 471
+    },
+    {
+      "path": "assets/qr/works/7634055838402923822.png",
+      "status": 200,
+      "bytes": 482
+    },
+    {
+      "path": "assets/qr/works/7629607699910626601.png",
+      "status": 200,
+      "bytes": 478
+    },
+    {
+      "path": "assets/icons/caret-down.svg",
+      "status": 200,
+      "bytes": 202
+    },
+    {
+      "path": "assets/icons/list.svg",
+      "status": 200,
+      "bytes": 269
+    },
+    {
+      "path": "assets/icons/play-circle.svg",
+      "status": 200,
+      "bytes": 243
+    },
+    {
+      "path": "assets/icons/x.svg",
+      "status": 200,
+      "bytes": 256
+    },
+    {
+      "path": "assets/icons/qr-code.svg",
+      "status": 200,
+      "bytes": 630
+    },
+    {
+      "path": "assets/icons/arrow-right.svg",
+      "status": 200,
+      "bytes": 235
+    },
+    {
+      "path": "assets/icons/check.svg",
+      "status": 200,
+      "bytes": 203
+    },
+    {
+      "path": "assets/icons/copy.svg",
+      "status": 200,
+      "bytes": 279
+    },
+    {
+      "path": "assets/icons/arrow-up-right.svg",
+      "status": 200,
+      "bytes": 213
+    },
+    {
+      "path": "assets/icons/magnifying-glass.svg",
+      "status": 200,
+      "bytes": 243
+    },
+    {
+      "path": "assets/icons/heart.svg",
+      "status": 200,
+      "bytes": 489
+    }
+  ]
+}

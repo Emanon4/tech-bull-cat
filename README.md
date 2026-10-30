@@ -1,51 +1,61 @@
-# 科创大牛猫 · 像素风官网
+# 科创大牛猫 · 作品放映室
 
-全网 700 万+ 粉丝的科技 × 商业 × AI 内容 IP「科创大牛猫」的介绍 / 招商官网。
-纯静态（无构建），像素风，主色 `#FF6126`，中 / 英 / 日三语即时切换。
-品牌定位 TECH-INNOVATION，**主要在微信内打开阅读**（故作品/平台均配二维码长按跳转）。
+静态 GitHub Pages 官网。基于已选定的电影画廊 Demo 更新，以同一出镜人／数字人的 9 张场景演绎图片连接真实历史作品。
 
-## 技术栈
+## 本版体验
 
-- 单页静态：`index.html` + `assets/style.css` + `assets/main.js`，零依赖、零构建。
-- 像素字体：**Zpix**（OFL 开源）按页面实际用字子集化为 `assets/zpix-subset.woff2`（4.4MB → 约 38KB）；英文点缀用 Google Fonts 的 **Press Start 2P**。
-- 吉祥物：账号方 logo（半猫半牛贴纸）经 ffmpeg 像素化（96/128px 母版 + `image-rendering:pixelated`），圆形头像 + 橙色像素描边。
-- 像素质感：CRT 扫描线、像素网格背景、硬投影按钮、六边形战士雷达图（SVG）、内容卡单色像素线框图标（SVG `crispEdges`，非 emoji）、数据条 / 计数滚动动画（IntersectionObserver，尊重 `prefers-reduced-motion`）。
-- 二维码：`segno` 生成（深炭 `#1A1208` on 暖白 `#F5EFE6`，微信可长按识别），存 `assets/qr/`。
-- 背景音乐：`Sunny Afternoon` by HoliznaCC0，**CC0 公共领域**（可商用、无需署名，页脚出于礼貌标注），`assets/bgm.mp3`。
+- 首页主视觉是米哈游代表作，下面是 8 个精选场景。每个场景使用不同服装，保留同一人物的面貌与眼镜特征。
+- 图片和标题直接进入对应抖音原片；浏览器后退返回画廊。二维码按钮提供独立入口，适合微信中长按识别。
+- 80 部候选作品均提供中文、英文、日文标题，支持分类和跨语言关键词搜索（含全角／半角输入）。展开经典片单后可按播放／点赞排序，每次增加 12 部。
+- 导航的「账号介绍」打开 `about.html`，完整保留原官网的 8 个板块和原有交互；顶部入口可返回作品放映室。
+- 保留中／英／日切换，商务联系方式和原有平台入口。音乐默认关闭，由访客主动开启。
+- 手机使用两列画廊；320px 窄屏有专门适配。支持键盘操作、原生模态框与减少动态效果偏好。
 
-## 数据口径
+## 启动与验证
 
-- 抖音 **粉丝 351.4 万 / 获赞 5735.3 万 / 作品 241**：官方接口核实（实时）。抖音号 `kcdaniumao`，抖音创作者学院合作讲师。
-- 全网 700 万+ / 快手 300 万+ / 今日头条 19 万+ / 小红书 5.8 万 / 视频号 3 万+：账号方官方招商口径。
-- B 站实际约 5 千粉（矩阵小号），页面刻意只标「运营中」，不展示数字。
-- 代表作 3 条均经核实：芯片热血故事(378.2万播放/8.6万赞)、米哈游(1163万播放/10.9万赞，单条最高)、Mate70 麒麟(158.4万播放/4.1万赞)。
-- 商务合作微信：**`O_p-xiang`**（账号各平台主页公开口径；招商文档另写 qianpai9999，已按用户要求采用 O_p-xiang）。
+零构建、无运行依赖。在仓库根目录运行：
 
-## 部署（GitHub Pages）
+```bash
+python3 -m http.server 8734 --bind 127.0.0.1
+```
 
-1. 仓库根目录含 `.nojekyll`（禁用 Jekyll，保证 `assets/` 正常加载）。
-2. 推到 `main` 分支根目录，Settings → Pages → Source 选 `main / root`。
-3. **部署后回填**：`index.html` 内 `og:url` 绝对域名；建议另备 1200×630 横图作 `og:image` / `twitter:image`（当前 twitter:card 为 summary 小卡，配方头像）。
-4. 资源引用都带 `?v=N`（当前 v2）；**改样式 / JS / 图后务必 bump 版本号**，否则浏览器 / CDN 缓存会加载旧版导致版本错配。
+打开 `http://localhost:8734/`。使用 `localhost` 可避免本次 Mac 浏览器对回环 IP 的连接超时。
 
-## 资源更新
+```bash
+node --check assets/main.js
+node --check assets/works-data.js
+node qa/tools/verify-data.cjs
+# macOS：逐张读取二维码，验证实际编码内容
+swift qa/tools/verify-qr.swift assets/qr/works
+```
 
-- **作品封面**：竖图放 `assets/works/`，用 `sips -s format jpeg`（macOS 原生、标准 baseline JPEG，Chrome 必认；**勿用 ffmpeg 输出 jpg**，其 `yuvj444p` 采样在 headless Chrome 下会渲染成黑块）。替换后 bump `?v`。
-- **二维码**：改链接后重跑 `segno`（见下），输出深炭 on 暖白 PNG 到 `assets/qr/`。
-- **字体子集**：改动文案后若新增了字，重新子集化——
-  ```bash
-  cat index.html assets/main.js > raw/allchars.txt
-  python3 -m fontTools.subset raw/Zpix.ttf --text-file=raw/allchars.txt \
-    --unicodes="U+0020-007E,U+00B7,U+00D7,U+2014,U+2018-201F,U+2022,U+2026,U+2192,U+25A0-25FF,U+2605,U+2606,U+2764,U+266A,U+2713,U+3000-303F,U+FF00-FFEF,U+3040-30FF" \
-    --flavor=woff2 --output-file=assets/zpix-subset.woff2 --no-hinting --desubroutinize
-  ```
-- **二维码生成**：
-  ```python
-  import segno
-  segno.make(URL, error='m').save('assets/qr/xx.png', scale=8, border=3, dark='#1A1208', light='#F5EFE6')
-  ```
+实际浏览器检测和截图见 [design-qa.md](design-qa.md)。语法／HTTP 检查不代替浏览器验收。
 
-## 待办 / 第二批素材
+## 内容和数据
 
-- 部署域名确定后回填 og 标签 + 备 1200×630 分享横图
-- 如需更换 BGM：同专辑 HoliznaCC0 其余 CC0 曲目可直接替换（Level 1/2、Red Skies 等）
+`assets/works-data.js` 是 80 部作品的展示数据；每部作品的 `titles.en` / `titles.ja` 保存英日文展示标题，中文原题继续保留。ID 保持字符串，避免 JavaScript 大整数精度丢失。不要改变原片 URL 中的 ID。
+
+2026-10-30 检索了公开主页的 261 部作品，在用户指定的已登录 Aside 中读取播放量，按 ID 与公开作品交叉匹配。80 部入选作品的 URL、播放及点赞显示值均与该公开作品快照核对一致。账号侧额外显示的 2 部作品未加入本版。
+
+页面保留平台显示的“万”精度，排序数值由该显示值换算。它们是采集日快照，不能解读为持续更新的实时统计。未将“点赞量”当成播放量。
+
+9 张数字人图片属于场景演绎，页面已标注；点击后仍是原始历史视频。图片不作为数字人在历史现场实际出现的证明，不包含重新生成的视频或实时数字人对话。
+
+商务微信 `qianpai857` 来自本次核对的抖音账号简介。新首页以本次核对信息为准；「账号介绍」中的原站数据与联系方式按原版保留，顶部说明其原版口径。
+
+## 资源与维护
+
+- `index.html`：语义结构与搜索／分享元数据。
+- `assets/style.css`：深色画廊、品牌橙 `#FF6126`、响应式布局。
+- `assets/main.js`：无框架交互、语言切换与二维码弹窗。
+- `about.html`：原官网完整内容；原样复制的 CSS / JS 分别为 `legacy-style.css` / `legacy-main.js`，新导航单独由 `about-bridge.*` 提供，避免两套页面相互覆盖。
+- `assets/gallery/*.{jpg,-720.jpg}`：9 个独立生成场景，每张 2 个分辨率，使用 baseline JPEG。PNG 母版保留在本地 `raw/gallery/`，不随网页加载。
+- `assets/qr/works/`：80 张二维码，内容都是对应原片的完整 HTTPS URL。
+- `assets/icons/`：官方 `@phosphor-icons/core 2.1.1` SVG，MIT 许可原文随附。未手绘替代图标。
+- 品牌头像沿用账号原有素材。背景音乐沿用 `Sunny Afternoon` by HoliznaCC0，CC0。
+
+修改 CSS、JS、展示数据后同步更新 HTML 的版本参数。新增作品时先核对原片 ID、公开状态和指标口径，再生成其二维码；仅有真实场景图时才将其加入图片画廊。
+
+## 发布
+
+现有 GitHub Pages 地址为 `https://emanon4.github.io/tech-bull-cat/`。仓库保留零构建结构和 `.nojekyll`，将已验收的分支合并到 `main` 后按现有 Pages 配置部署。合并前的本地预览不会替换线上网站；上线后仍需检查实际生产页面和资源状态。

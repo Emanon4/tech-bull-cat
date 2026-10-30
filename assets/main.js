@@ -1,310 +1,559 @@
-/* ============================================================
-   科创大牛猫 · 像素风官网  main.js
-   i18n(中/EN/日) · 计数 · 滚动揭示 · 复制微信 · BGM 容错
-   ============================================================ */
-(function () {
-  'use strict';
-
-  /* ---------------- i18n 词典 ---------------- */
-  var I18N = {
+(() => {
+  "use strict";
+  const data = window.DNM_WORKS;
+  if (!data || !Array.isArray(data.works)) return;
+  const $ = (selector) => document.querySelector(selector);
+  const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+  const works = data.works;
+  const byId = new Map(works.map((work) => [work.id, work]));
+  const hero = byId.get(data.heroId);
+  const featured = data.featuredIds.map((id) => byId.get(id)).filter(Boolean);
+  const featuredIds = new Set(data.featuredIds);
+  const state = {
+    category: "all",
+    query: "",
+    lang: "zh",
+    archiveOpen: false,
+    limit: 12,
+  };
+  const translations = {
     zh: {
-      'a11y.skip': '跳到主内容', 'brand.name': '科创大牛猫',
-      'nav.stats': '数据', 'nav.about': '关于', 'nav.content': '内容', 'nav.works': '作品', 'nav.value': '价值', 'nav.brands': '品牌', 'nav.follow': '矩阵', 'nav.contact': '合作',
-      'hero.eyebrow': 'TECH-INNOVATION', 'hero.badge': '抖音创作者学院 · 合作讲师', 'hero.tagline': '让一部分科技先酷起来！',
-      'hero.sub': '全网 700 万+ 粉丝的科技 × 商业 × AI 内容品牌', 'hero.cta1': '看代表作', 'hero.cta2': '商务合作', 'hero.start': '▼ PRESS START ▼',
-      'stats.eyebrow': 'DATA · 数据面板', 'stats.title': '全网数据墙', 'stats.total': '全网总粉丝', 'stats.totalN': '700万+',
-      'st.dy': '抖音', 'st.dyN': '351.4万', 'st.ks': '快手', 'st.ksN': '300万+', 'st.tt': '今日头条', 'st.ttN': '19万+',
-      'st.xhs': '小红书', 'st.xhsN': '5.8万', 'st.sph': '视频号', 'st.sphN': '3万+', 'st.more': '微博 · 支付宝', 'st.run': '运营中',
-      'stats.likesN': '5735.3万', 'stats.likes': '抖音累计获赞', 'stats.worksN': '241', 'stats.works': '抖音作品数', 'stats.maxN': '1164万', 'stats.max': '单条最高播放',
-      'stats.slogan': '一次投放 · 8 倍裂变 · 全域轰炸',
-      'stats.note': '数据综合各平台公开主页：抖音为实时数据，其余为官方招商口径，以平台官方为准。',
-      'about.eyebrow': 'PROFILE · 角色档案', 'about.title': '优质科技 & 商业内容品牌',
-      'about.body': '让您的产品在科技浪潮中脱颖而出、深入人心。科创大牛猫深耕全球科技动态、新能源汽车、人工智能与商业洞察，把复杂技术讲成用户爱看的故事。',
-      'about.t1': 'IP 属地 · 广东深圳', 'about.t2': '科技 & AI 博主', 'about.t3': '抖音学院合作讲师', 'about.hexTitle': '六边形战士 · 满级技能',
-      'hex.1': '可混剪', 'hex.2': '可出镜', 'hex.3': '可直播', 'hex.4': '可实测', 'hex.5': '可探展', 'hex.6': '可急单', 'about.hexNote': '一人成军 · 全链路自产',
-      'content.eyebrow': 'STAGES · 内容关卡', 'content.title': '内容遍及',
-      'c1.t': '人工智能 & 机器人', 'c1.d': 'AI 工具实测、隐形产业链拆解、机器人前沿动态。',
-      'c2.t': '新能源汽车 & 3C 数码', 'c2.d': '新车实测、手机芯片、智能硬件与智能家电。',
-      'c3.t': '商业洞察 & 科创投资', 'c3.d': '财报拆解、行业内幕、产业趋势与投资视角。',
-      'c4.t': '游戏评测 & 探展直击', 'c4.d': '游戏厂商解读，CES · MWC · AWE · 世界机器人大会现场。',
-      'content.tags': '全球科技动态 · 国产替代 · 中国智造出海 · 智能家电',
-      'works.eyebrow': 'WORKS · 爆款卡带', 'works.title': '代表作品', 'works.lead': '真实数据 · 点击或微信长按二维码，直达抖音原片。',
-      'wk.1tag': '华为 · 芯片', 'wk.1t': '一颗芯片和它的热血故事', 'wk.1stat': '▶ 390.0万　❤ 8.6万',
-      'wk.2tag': '米哈游 · 商业', 'wk.hot': '最高播放', 'wk.2t': '1 年营收 300 亿，印钞机米哈游的逆袭', 'wk.2stat': '▶ 1164万　❤ 10.9万',
-      'wk.3tag': '华为 · 麒麟', 'wk.3t': 'Mate70 麒麟芯片，又要让美国彻夜难眠', 'wk.3stat': '▶ 162.0万　❤ 4.1万',
-      'work.scan': '长按看片', 'work.gen': 'AI 生成封面',
-      'works.moreTitle': '更多高赞内容', 'works.all': '前往抖音主页看全部 →',
-      'wk.m1': '深扒 AI 隐形产业链', 'wk.m1k': '❤ 1.2万', 'wk.m2': '全网梦境接龙 · 让 AI 可视化你的梦', 'wk.m2k': '❤ 2.1万',
-      'wk.m3': '中央空调实测 · 国产凭什么反超日系', 'wk.m3k': '❤ 1.2万', 'wk.m4': '一块电池，改变了城市的三种人', 'wk.m4k': '❤ 2.0万',
-      'wk.m5': '世界顶刊为何签下中国 AI', 'wk.m5k': '❤ 1.3万', 'wk.m6': '腾讯游戏大战网易，你觉得谁会赢', 'wk.m6k': '❤ 5.8万',
-      'value.eyebrow': 'BUFFS · 商单价值', 'value.title': '品牌为什么选大牛猫',
-      'v1.t': '用户视角', 'v1.d': '把复杂技术，转成用户易懂、爱看的内容。', 'v2.t': '人文关怀', 'v2.d': '挖掘产品 / 技术背后与用户的情感连接。',
-      'v3.t': '形象直观', 'v3.d': '用视频表现，让卖点与内涵深入人心。', 'v4.t': '共情能力', 'v4.d': '激发观众的共鸣与价值认同。',
-      'value.typesTitle': '商单类型', 'ty.1': '新能源 / 3C 成功案例', 'ty.2': '科技深度评测', 'ty.3': '品宣系列', 'ty.4': '长期品牌合作', 'ty.5': '品牌深度定制',
-      'brands.eyebrow': 'PARTNERS · 合作品牌', 'brands.title': '合作品牌墙', 'brands.t1': '第一梯队', 'brands.t2': '第二梯队', 'brands.t3': '更多伙伴',
-      'brands.note': '以上为历史合作 / 案例涉及品牌，具体以实际项目为准。',
-      'follow.eyebrow': 'CHANNELS · 全域矩阵', 'follow.title': '关注大牛猫', 'follow.scan': '微信内长按二维码，即可一键关注。',
-      'follow.dyN': '351.4万', 'follow.ksN': '300万+', 'follow.ttN': '19万+', 'follow.xhsN': '5.8万',
-      'follow.main': '主阵地', 'follow.run': '运营中', 'follow.more': '视频号 · 微博 · 支付宝', 'follow.run2': '全域覆盖',
-      'contact.eyebrow': 'CONTACT · 商务合作', 'contact.title': '一起做点酷的',
-      'contact.body': '品牌投放、产品实测、探展直播、长期共创 —— 六边形战士，可急单。一次投放，8 倍裂变，全域轰炸。', 'contact.wxLabel': '商务合作微信', 'contact.copy': '点击复制',
-      'foot.copy': '© 2026 科创大牛猫 · 让一部分科技先酷起来', 'foot.music': '背景音乐：Sunny Afternoon · HoliznaCC0（CC0 公共领域）',
-      'foot.note': '数据来自各平台公开主页，以平台官方为准。本站为内容介绍与商务合作用途。', 'foot.top': '▲ 回到顶部',
-      _title: '科创大牛猫 · 让一部分科技先酷起来'
+      skip: "跳到主内容",
+      navGallery: "作品放映室",
+      navField: "走进现场",
+      navProfile: "账号介绍",
+      navContact: "合作",
+      tagline: "让一部分科技先酷起来",
+      sceneLabel: "数字人场景演绎",
+      heroEyebrow: "经典代表",
+      heroLine1: "米哈游的",
+      heroLine2: "商业世界",
+      heroDescription:
+        "从产品创意到全球市场，拆解米哈游如何用内容和技术，打造触动全球玩家的商业故事。",
+      views: "播放",
+      likes: "点赞",
+      watch: "观看原片",
+      galleryEyebrow: "回到那些经典瞬间",
+      galleryTitle: "好故事，值得再看一次。",
+      galleryHint: "点击画面，进入原片",
+      filterAll: "精选",
+      filterField: "现场",
+      filterCars: "汽车",
+      filterDigital: "数码",
+      filterBusiness: "商业",
+      searchLabel: "搜索作品",
+      searchPlaceholder: "搜索品牌、车型或主题",
+      emptyTitle: "还没有找到这段故事",
+      emptyText: "换个关键词，或回到全部作品看看。",
+      reset: "查看全部作品",
+      explore: "继续浏览经典作品",
+      collapse: "收起经典片单",
+      archiveEyebrow: "更多值得回看的作品",
+      archiveTitle: "经典片单",
+      sortLabel: "作品排序",
+      sortCurated: "策展顺序",
+      sortPlays: "播放量从高到低",
+      sortLikes: "点赞从高到低",
+      loadMore: "再看 12 部",
+      contactEyebrow: "下一个故事，一起出发",
+      contactTitle: "把好科技，讲给更多人听。",
+      contactText: "科技探展 · 汽车体验 · 商业故事",
+      wechat: "商务微信",
+      copy: "复制微信号",
+      profile: "去抖音主页逛逛",
+      kuaishou: "快手",
+      rednote: "小红书",
+      bilibili: "哔哩哔哩",
+      sourceNote:
+        "画面为数字人场景演绎，对应原片入口；播放与点赞数据采集于 2026.10.30，以平台显示为准。",
+      musicOff: "背景音乐：关",
+      musicOn: "背景音乐：开",
+      musicError: "暂时无法播放音乐，请稍后重试。",
+      qrEyebrow: "继续观看",
+      qrDescription: "扫码或在微信中长按识别二维码，观看对应原片。",
+      qrAlt: "该作品的抖音二维码",
+      qrAction: "打开原片二维码",
+      close: "关闭二维码",
+      external: "观看原片",
+      menuOpen: "打开导航",
+      menuClose: "关闭导航",
+      copied: "微信号已复制：qianpai857",
+      copyFallback: "请长按或选择微信号复制：qianpai857",
+      result: (n) => `共 ${n} 部作品 · 数据采集于 2026.10.30`,
+      showing: (n, total) => `已显示 ${n} / ${total} 部`,
+      pageTitle: "科创大牛猫 · 作品放映室",
     },
     en: {
-      'a11y.skip': 'Skip to content', 'brand.name': 'Tech Bull Cat',
-      'nav.stats': 'Data', 'nav.about': 'About', 'nav.content': 'Content', 'nav.works': 'Works', 'nav.value': 'Value', 'nav.brands': 'Brands', 'nav.follow': 'Channels', 'nav.contact': 'Contact',
-      'hero.eyebrow': 'TECH-INNOVATION', 'hero.badge': 'Douyin Academy · Lecturer', 'hero.tagline': 'Make some tech cool first!',
-      'hero.sub': 'A 7M+ follower brand across Tech × Business × AI', 'hero.cta1': 'See Top Works', 'hero.cta2': 'Partner With Us', 'hero.start': '▼ PRESS START ▼',
-      'stats.eyebrow': 'DATA · DASHBOARD', 'stats.title': 'The Numbers', 'stats.total': 'Total followers', 'stats.totalN': '7M+',
-      'st.dy': 'Douyin', 'st.dyN': '3.51M', 'st.ks': 'Kuaishou', 'st.ksN': '3M+', 'st.tt': 'Toutiao', 'st.ttN': '190K+',
-      'st.xhs': 'Rednote', 'st.xhsN': '58K', 'st.sph': 'WeChat Channels', 'st.sphN': '30K+', 'st.more': 'Weibo · Alipay', 'st.run': 'Active',
-      'stats.likesN': '57.35M', 'stats.likes': 'Total likes (Douyin)', 'stats.worksN': '241', 'stats.works': 'Videos', 'stats.maxN': '11.64M', 'stats.max': 'Top video views',
-      'stats.slogan': 'One drop · 8× spread · Omni-channel',
-      'stats.note': 'Figures from public profiles. Douyin is live; others per the official media kit. Platforms are authoritative.',
-      'about.eyebrow': 'PROFILE', 'about.title': 'Premium Tech & Business Content',
-      'about.body': 'We make your product stand out — and stick — in the tech wave. Tech Bull Cat covers global tech, EVs, AI and business, turning complex tech into stories people love.',
-      'about.t1': 'Based in Shenzhen', 'about.t2': 'Tech & AI Creator', 'about.t3': 'Douyin Academy Lecturer', 'about.hexTitle': 'All-rounder · All skills MAX',
-      'hex.1': 'Editing', 'hex.2': 'Camera', 'hex.3': 'Live', 'hex.4': 'Reviews', 'hex.5': 'Expo', 'hex.6': 'Rush', 'about.hexNote': 'A one-person studio, end to end',
-      'content.eyebrow': 'STAGES', 'content.title': 'We Cover',
-      'c1.t': 'AI & Robotics', 'c1.d': 'Hands-on AI tools, hidden supply chains, the robotics frontier.',
-      'c2.t': 'EVs & Gadgets', 'c2.d': 'Car reviews, mobile chips, smart hardware & appliances.',
-      'c3.t': 'Business & Investing', 'c3.d': 'Earnings, industry insider, trends and investing.',
-      'c4.t': 'Games & Expos', 'c4.d': 'Game studios, CES · MWC · AWE · World Robot Conference on site.',
-      'content.tags': 'Global tech · Domestic substitution · China going global · Smart home',
-      'works.eyebrow': 'WORKS', 'works.title': 'Top Works', 'works.lead': 'Real numbers · tap, or long-press the QR in WeChat, to watch on Douyin.',
-      'wk.1tag': 'Huawei · Chips', 'wk.1t': 'A Chip and Its Fighting Story', 'wk.1stat': '▶ 3.9M　❤ 86K',
-      'wk.2tag': 'miHoYo · Business', 'wk.hot': 'Top views', 'wk.2t': '¥30B Revenue: miHoYo, the Money Machine', 'wk.2stat': '▶ 11.64M　❤ 109K',
-      'wk.3tag': 'Huawei · Kirin', 'wk.3t': "Mate70's Kirin Chip Keeps the US Up at Night", 'wk.3stat': '▶ 1.62M　❤ 41K',
-      'work.scan': 'Scan to watch', 'work.gen': 'AI-made cover',
-      'works.moreTitle': 'More Top Videos', 'works.all': 'See all on Douyin →',
-      'wk.m1': "AI's Hidden Supply Chain", 'wk.m1k': '❤ 12K', 'wk.m2': 'AI Visualizes Your Dreams', 'wk.m2k': '❤ 21K',
-      'wk.m3': 'Why Domestic AC Beats Japan', 'wk.m3k': '❤ 12K', 'wk.m4': 'One Battery, Three Kinds of People', 'wk.m4k': '❤ 20K',
-      'wk.m5': "Why Top Journals Pick China's AI", 'wk.m5k': '❤ 13K', 'wk.m6': 'Tencent vs NetEase: Who Wins?', 'wk.m6k': '❤ 58K',
-      'value.eyebrow': 'WHY US', 'value.title': 'Why Brands Choose Us',
-      'v1.t': 'User-first', 'v1.d': 'Turn complex tech into content people get and enjoy.', 'v2.t': 'Human Touch', 'v2.d': 'Find the emotional link behind the product.',
-      'v3.t': 'Vivid & Clear', 'v3.d': 'Make selling points land through video.', 'v4.t': 'Resonance', 'v4.d': 'Spark resonance and shared values.',
-      'value.typesTitle': 'Campaign Types', 'ty.1': 'EV & Gadget Wins', 'ty.2': 'Deep Reviews', 'ty.3': 'Brand Series', 'ty.4': 'Long-term Partners', 'ty.5': 'Custom Builds',
-      'brands.eyebrow': 'PARTNERS', 'brands.title': "Brands We've Worked With", 'brands.t1': 'Tier 1', 'brands.t2': 'Tier 2', 'brands.t3': 'More Partners',
-      'brands.note': 'Brands above are from past collaborations / cases; subject to actual projects.',
-      'follow.eyebrow': 'CHANNELS', 'follow.title': 'Follow Us', 'follow.scan': 'Long-press a QR code in WeChat to follow instantly.',
-      'follow.dyN': '3.51M', 'follow.ksN': '3M+', 'follow.ttN': '190K+', 'follow.xhsN': '58K',
-      'follow.main': 'MAIN', 'follow.run': 'Active', 'follow.more': 'Channels · Weibo · Alipay', 'follow.run2': 'Omni-channel',
-      'contact.eyebrow': 'CONTACT', 'contact.title': "Let's Make Something Cool",
-      'contact.body': 'Brand drops, product reviews, expo livestreams, long-term co-creation — an all-rounder who takes rush jobs. One drop, 8× spread, omni-channel.', 'contact.wxLabel': 'Business WeChat', 'contact.copy': 'Tap to copy',
-      'foot.copy': '© 2026 Tech Bull Cat · Make some tech cool first', 'foot.music': 'Music: "Sunny Afternoon" by HoliznaCC0 (CC0 / Public Domain)',
-      'foot.note': 'Data from public profiles; platforms are authoritative. This site is for intro & partnerships.', 'foot.top': '▲ Back to top',
-      _title: 'Tech Bull Cat · Make some tech cool first'
+      skip: "Skip to content",
+      navGallery: "Screening room",
+      navField: "On location",
+      navProfile: "Profile",
+      navContact: "Collaborate",
+      tagline: "A cooler side of technology",
+      sceneLabel: "Digital-human scene",
+      heroEyebrow: "THE SIGNATURE STORY",
+      heroLine1: "Inside the world",
+      heroLine2: "of miHoYo",
+      heroDescription:
+        "From creative ideas to a global audience: how miHoYo turns content and technology into a business that connects players worldwide.",
+      views: "Views",
+      likes: "Likes",
+      watch: "Watch original",
+      galleryEyebrow: "REVISIT THE MOMENT",
+      galleryTitle: "Good stories deserve another look.",
+      galleryHint: "Select an image to watch the original",
+      filterAll: "Selected",
+      filterField: "On location",
+      filterCars: "Cars",
+      filterDigital: "Tech",
+      filterBusiness: "Business",
+      searchLabel: "Search stories",
+      searchPlaceholder: "Search a brand, model or topic",
+      emptyTitle: "No stories found",
+      emptyText: "Try another keyword, or browse the full collection.",
+      reset: "View all stories",
+      explore: "Explore more classic stories",
+      collapse: "Hide the collection",
+      archiveEyebrow: "MORE STORIES TO REDISCOVER",
+      archiveTitle: "The collection",
+      sortLabel: "Sort stories",
+      sortCurated: "Curated order",
+      sortPlays: "Most viewed",
+      sortLikes: "Most liked",
+      loadMore: "Show 12 more",
+      contactEyebrow: "LET’S MAKE THE NEXT STORY",
+      contactTitle: "Bring good technology to more people.",
+      contactText: "Technology on location · Cars · Business",
+      wechat: "Business WeChat",
+      copy: "Copy WeChat ID",
+      profile: "Explore our Douyin",
+      kuaishou: "Kuaishou",
+      rednote: "RedNote",
+      bilibili: "Bilibili",
+      sourceNote:
+        "Images are digital-human scene interpretations linked to the original videos. Views and likes were recorded on 30 Oct 2026; the platform is the current source.",
+      musicOff: "Music: off",
+      musicOn: "Music: on",
+      musicError: "Music is unavailable. Please try again.",
+      qrEyebrow: "KEEP WATCHING",
+      qrDescription:
+        "Scan or long-press this QR code in WeChat to open the original video.",
+      qrAlt: "Douyin QR code for this story",
+      qrAction: "Open the video QR code",
+      close: "Close QR code",
+      external: "Watch the original",
+      menuOpen: "Open navigation",
+      menuClose: "Close navigation",
+      copied: "Copied WeChat ID: qianpai857",
+      copyFallback: "Select or long-press to copy: qianpai857",
+      result: (n) => `${n} ${n === 1 ? "story" : "stories"} · Snapshot: 30 Oct 2026`,
+      showing: (n, total) => `${n} of ${total} ${total === 1 ? "story" : "stories"} shown`,
+      pageTitle: "科创大牛猫 · Screening room",
     },
     ja: {
-      'a11y.skip': '本文へスキップ', 'brand.name': '科創大牛猫',
-      'nav.stats': 'データ', 'nav.about': '概要', 'nav.content': 'コンテンツ', 'nav.works': '作品', 'nav.value': '価値', 'nav.brands': 'ブランド', 'nav.follow': 'チャンネル', 'nav.contact': '協業',
-      'hero.eyebrow': 'TECH-INNOVATION', 'hero.badge': 'Douyin 学院 · 講師', 'hero.tagline': '一部のテックを、先にクールに！',
-      'hero.sub': '全網700万人超のテック × ビジネス × AI ブランド', 'hero.cta1': '代表作を見る', 'hero.cta2': 'お問い合わせ', 'hero.start': '▼ PRESS START ▼',
-      'stats.eyebrow': 'DATA · データ', 'stats.title': '全網データ', 'stats.total': '総フォロワー', 'stats.totalN': '700万+',
-      'st.dy': 'Douyin', 'st.dyN': '351.4万', 'st.ks': 'Kuaishou', 'st.ksN': '300万+', 'st.tt': 'Toutiao', 'st.ttN': '19万+',
-      'st.xhs': '小紅書', 'st.xhsN': '5.8万', 'st.sph': '視頻号', 'st.sphN': '3万+', 'st.more': '微博 · Alipay', 'st.run': '運用中',
-      'stats.likesN': '5735万', 'stats.likes': '累計いいね（Douyin）', 'stats.worksN': '241', 'stats.works': '投稿数', 'stats.maxN': '1164万', 'stats.max': '最高再生数',
-      'stats.slogan': '一度の出稿 · 8倍拡散 · 全域リーチ',
-      'stats.note': 'データは各プラットフォームの公開プロフィールより。Douyinはリアルタイム、他は公式メディアキット基準。',
-      'about.eyebrow': 'PROFILE · プロフィール', 'about.title': '良質なテック & ビジネスのコンテンツブランド',
-      'about.body': '製品をテックの波の中で際立たせ、心に残す。科創大牛猫はグローバルテック・EV・AI・ビジネスを掘り下げ、複雑な技術を愛されるストーリーに変える。',
-      'about.t1': '拠点 · 深圳', 'about.t2': 'テック・AI系クリエイター', 'about.t3': 'Douyin学院 講師', 'about.hexTitle': 'オールラウンダー · 全スキル MAX',
-      'hex.1': '編集', 'hex.2': '出演', 'hex.3': '配信', 'hex.4': '実機検証', 'hex.5': '展示会', 'hex.6': '急ぎ対応', 'about.hexNote': '一人で全工程を内製',
-      'content.eyebrow': 'STAGES · コンテンツ', 'content.title': '取り扱う領域',
-      'c1.t': 'AI & ロボット', 'c1.d': 'AIツール実測、隠れたサプライチェーン、ロボット最前線。',
-      'c2.t': 'EV & ガジェット', 'c2.d': '新車実測、スマホチップ、スマート家電。',
-      'c3.t': 'ビジネス & 投資', 'c3.d': '決算分析、業界の裏側、トレンドと投資視点。',
-      'c4.t': 'ゲーム & 展示会', 'c4.d': 'ゲーム業界、CES · MWC · AWE · 世界ロボット大会の現場。',
-      'content.tags': 'グローバルテック · 国産化 · 中国製造の海外進出 · スマート家電',
-      'works.eyebrow': 'WORKS · 作品', 'works.title': '代表作', 'works.lead': '実数値 · タップ、またはWeChatでQRを長押しして視聴。',
-      'wk.1tag': 'Huawei · チップ', 'wk.1t': 'あるチップの熱い物語', 'wk.1stat': '▶ 390.0万　❤ 8.6万',
-      'wk.2tag': 'miHoYo · ビジネス', 'wk.hot': '最高再生', 'wk.2t': '年商300億円、“ドル箱”ミホヨの逆襲', 'wk.2stat': '▶ 1164万　❤ 10.9万',
-      'wk.3tag': 'Huawei · Kirin', 'wk.3t': 'Mate70の麒麟チップ、米国を眠らせない', 'wk.3stat': '▶ 162.0万　❤ 4.1万',
-      'work.scan': '長押しで視聴', 'work.gen': 'AI生成カバー',
-      'works.moreTitle': 'その他の人気動画', 'works.all': 'Douyinで全部見る →',
-      'wk.m1': 'AIの隠れた産業チェーン', 'wk.m1k': '❤ 1.2万', 'wk.m2': 'AIが夢を可視化', 'wk.m2k': '❤ 2.1万',
-      'wk.m3': '国産エアコンが日系を超えた訳', 'wk.m3k': '❤ 1.2万', 'wk.m4': '一つの電池が変えた三者', 'wk.m4k': '❤ 2.0万',
-      'wk.m5': 'トップ誌が中国AIを選ぶ理由', 'wk.m5k': '❤ 1.3万', 'wk.m6': 'テンセント対ネットイース、勝つのは？', 'wk.m6k': '❤ 5.8万',
-      'value.eyebrow': 'WHY US · 価値', 'value.title': 'ブランドが選ぶ理由',
-      'v1.t': 'ユーザー視点', 'v1.d': '難しい技術を、分かりやすく面白く。', 'v2.t': '人間味', 'v2.d': '製品の裏にある感情のつながりを掘る。',
-      'v3.t': '直感的', 'v3.d': '動画で売りを心に届ける。', 'v4.t': '共感', 'v4.d': '共感と価値の共有を生む。',
-      'value.typesTitle': '案件タイプ', 'ty.1': 'EV・3C 成功事例', 'ty.2': '詳細レビュー', 'ty.3': 'ブランド企画', 'ty.4': '長期提携', 'ty.5': 'フルカスタム',
-      'brands.eyebrow': 'PARTNERS · 提携', 'brands.title': '提携ブランド', 'brands.t1': '第1ティア', 'brands.t2': '第2ティア', 'brands.t3': 'その他',
-      'brands.note': '上記は過去の提携 / 事例に関わるブランドです。実際の案件によります。',
-      'follow.eyebrow': 'CHANNELS · 全域', 'follow.title': 'フォローする', 'follow.scan': 'WeChatでQRコードを長押しすると、すぐフォローできます。',
-      'follow.dyN': '351.4万', 'follow.ksN': '300万+', 'follow.ttN': '19万+', 'follow.xhsN': '5.8万',
-      'follow.main': 'メイン', 'follow.run': '運用中', 'follow.more': '視頻号 · 微博 · Alipay', 'follow.run2': '全域カバー',
-      'contact.eyebrow': 'CONTACT · 協業', 'contact.title': 'クールなものを一緒に',
-      'contact.body': 'ブランド出稿、製品実測、展示会配信、長期共創 —— 急ぎ対応も可能なオールラウンダー。一度で8倍拡散、全域リーチ。', 'contact.wxLabel': 'ビジネス WeChat', 'contact.copy': 'タップでコピー',
-      'foot.copy': '© 2026 科創大牛猫 · 一部のテックを先にクールに', 'foot.music': '音楽：「Sunny Afternoon」HoliznaCC0（CC0 / パブリックドメイン）',
-      'foot.note': 'データは公開プロフィールより、公式が優先。本サイトは紹介・協業用途。', 'foot.top': '▲ トップへ',
-      _title: '科創大牛猫 · 一部のテックを先にクールに'
-    }
+      skip: "本文へ移動",
+      navGallery: "上映室",
+      navField: "現場へ",
+      navProfile: "プロフィール",
+      navContact: "お問い合わせ",
+      tagline: "テクノロジーを、もっとクールに",
+      sceneLabel: "デジタルヒューマンによる演出",
+      heroEyebrow: "代表作品",
+      heroLine1: "miHoYoの",
+      heroLine2: "ビジネスの世界",
+      heroDescription:
+        "アイデアから世界市場へ。コンテンツと技術で世界のプレイヤーをつなぐ、miHoYoのビジネスをひもときます。",
+      views: "再生",
+      likes: "いいね",
+      watch: "オリジナルを見る",
+      galleryEyebrow: "あの瞬間を、もう一度",
+      galleryTitle: "いい物語は、何度でも。",
+      galleryHint: "画像をクリックして元動画へ",
+      filterAll: "厳選",
+      filterField: "現場",
+      filterCars: "自動車",
+      filterDigital: "テック",
+      filterBusiness: "ビジネス",
+      searchLabel: "作品を検索",
+      searchPlaceholder: "ブランド・車種・テーマを検索",
+      emptyTitle: "作品が見つかりませんでした",
+      emptyText: "キーワードを変えるか、すべての作品をご覧ください。",
+      reset: "すべての作品を見る",
+      explore: "さらに名作を見る",
+      collapse: "作品リストを閉じる",
+      archiveEyebrow: "もう一度見たい物語",
+      archiveTitle: "作品コレクション",
+      sortLabel: "作品の並び順",
+      sortCurated: "おすすめ順",
+      sortPlays: "再生数の多い順",
+      sortLikes: "いいねの多い順",
+      loadMore: "さらに12作品",
+      contactEyebrow: "次の物語を、一緒に",
+      contactTitle: "優れた技術を、もっと多くの人へ。",
+      contactText: "テクノロジー取材 · 自動車 · ビジネス",
+      wechat: "ビジネス用WeChat",
+      copy: "WeChat IDをコピー",
+      profile: "Douyinのホームへ",
+      kuaishou: "快手",
+      rednote: "小紅書",
+      bilibili: "ビリビリ",
+      sourceNote:
+        "画像はデジタルヒューマンによるシーン演出です。リンク先は元動画。再生数・いいね数は2026年10月30日取得、最新情報はプラットフォームをご確認ください。",
+      musicOff: "BGM：オフ",
+      musicOn: "BGM：オン",
+      musicError: "音楽を再生できません。後でもう一度お試しください。",
+      qrEyebrow: "続きを見る",
+      qrDescription:
+        "QRコードをスキャン、またはWeChatで長押しして元動画をご覧ください。",
+      qrAlt: "作品のDouyin QRコード",
+      qrAction: "元動画のQRコードを開く",
+      close: "QRコードを閉じる",
+      external: "元動画を見る",
+      menuOpen: "ナビゲーションを開く",
+      menuClose: "ナビゲーションを閉じる",
+      copied: "WeChat IDをコピーしました：qianpai857",
+      copyFallback: "長押しまたは選択してコピー：qianpai857",
+      result: (n) => `全${n}作品 · 2026年10月30日取得`,
+      showing: (n, total) => `${total}作品中${n}作品を表示`,
+      pageTitle: "科创大牛猫 · 上映室",
+    },
   };
-
-  var LANGS = { zh: 'zh', en: 'en', ja: 'ja' };
-  var nodes = document.querySelectorAll('[data-i18n]');
-  var currentLang = 'zh';
-
-  function applyLang(lang) {
-    if (!I18N[lang]) lang = 'zh';
-    currentLang = lang;
-    var dict = I18N[lang];
-    nodes.forEach(function (el) {
-      var key = el.getAttribute('data-i18n');
-      if (dict[key] != null) el.textContent = dict[key];
-    });
-    document.documentElement.setAttribute('lang', LANGS[lang]);
-    document.title = dict._title;
-    document.querySelectorAll('.lang button').forEach(function (b) {
-      var on = b.getAttribute('data-lang') === lang;
-      b.classList.toggle('is-active', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
-    try { localStorage.setItem('dnm-lang', lang); } catch (e) {}
+  const t = (key) => translations[state.lang][key];
+  const titleOf = (work) =>
+    state.lang === "zh" ? work.title : work.titles?.[state.lang] || work.title;
+  const searchText = (value) => value.normalize("NFKC").toLocaleLowerCase();
+  const metric = (raw, value) =>
+    state.lang !== "en"
+      ? raw
+      : value >= 1e6
+        ? `${(value / 1e6).toFixed(3).replace(/0+$/, "").replace(/\.$/, "")}M`
+        : value >= 1e3
+          ? `${(value / 1e3).toFixed(1).replace(/\.0$/, "")}K`
+          : String(value);
+  function element(tag, className, text) {
+    const el = document.createElement(tag);
+    if (className) el.className = className;
+    if (text !== undefined) el.textContent = text;
+    return el;
   }
-
-  document.querySelectorAll('.lang button').forEach(function (b) {
-    b.addEventListener('click', function () { applyLang(b.getAttribute('data-lang')); });
-  });
-
-  var saved = 'zh';
-  try { saved = localStorage.getItem('dnm-lang') || 'zh'; } catch (e) {}
-  applyLang(saved);
-
-  /* ---------------- 滚动揭示 + 数据条/雷达触发 + 计数 ---------------- */
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  function countUp(el) {
-    if (el.dataset.counted) return;                 // 幂等：避免重复触发并发 rAF
-    // 非中文时数字已由 i18n 直接写入（如 7M+），不跑中文计数动画
-    if (el.dataset.i18n && currentLang !== 'zh') { el.dataset.counted = '1'; return; }
-    var target = parseFloat(el.getAttribute('data-count'));
-    var suffix = el.getAttribute('data-suffix') || '';
-    if (isNaN(target)) return;
-    el.dataset.counted = '1';
-    if (reduce) { el.textContent = target + suffix; return; }
-    var start = null, dur = 1100;
-    function step(ts) {
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
+  function icon(name, size) {
+    const img = element("img");
+    img.src = `assets/icons/${name}.svg`;
+    img.alt = "";
+    img.width = size;
+    img.height = size;
+    return img;
   }
-
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('in-view');
-        if (e.target.querySelectorAll) e.target.querySelectorAll('[data-count]').forEach(countUp);
-        io.unobserve(e.target);
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
-
-    document.querySelectorAll('.sec').forEach(function (s) { io.observe(s); });
-
-    if (!reduce) {
-      // 网格类容器：按容器内局部索引算延迟，避免跨网格错拍
-      document.querySelectorAll('.cards,.works,.more__list,.plats,.stat-grid,.tier__row,.types,.stat-extra,.tags').forEach(function (g) {
-        Array.prototype.forEach.call(g.children, function (el, idx) {
-          el.classList.add('reveal');
-          el.style.transitionDelay = (Math.min(idx, 5) * 50) + 'ms';
-          io.observe(el);
-        });
-      });
-      // 独立块：整体淡入，无错拍
-      document.querySelectorAll('.sec__head,.tier,.cta-box,.slogan-strip,.more__all').forEach(function (el) {
-        el.classList.add('reveal');
-        io.observe(el);
-      });
-    }
-  } else {
-    document.querySelectorAll('[data-count]').forEach(countUp);
+  function videoLink(work, className) {
+    const link = element("a", className);
+    link.href = work.url;
+    link.target = "_self";
+    link.rel = "noopener noreferrer";
+    link.setAttribute("aria-label", `${titleOf(work)} · ${t("external")}`);
+    return link;
   }
-
-  /* ---------------- 复制微信 + toast ---------------- */
-  var toastEl = document.getElementById('toast');
-  var toastTimer;
-  function toast(msg, ms) {
-    if (!toastEl) return;
-    toastEl.textContent = msg;
-    toastEl.classList.add('show');
+  function qrButton(work) {
+    const button = element("button", "icon-button");
+    button.type = "button";
+    button.dataset.qr = work.id;
+    button.setAttribute("aria-label", `${t("qrAction")}：${titleOf(work)}`);
+    button.append(icon("qr-code", 20));
+    return button;
+  }
+  function card(work) {
+    const article = element("article", "work-card");
+    article.dataset.workId = work.id;
+    const art = videoLink(work, "work-art");
+    const photo = element("img", "work-photo");
+    photo.src = `assets/gallery/${work.image}.jpg`;
+    photo.srcset = `assets/gallery/${work.image}-720.jpg 720w, assets/gallery/${work.image}.jpg 1536w`;
+    photo.sizes = "(max-width: 760px) 48vw, (max-width: 900px) 31vw, 24vw";
+    photo.width = 1536;
+    photo.height = 1024;
+    photo.loading = "lazy";
+    photo.decoding = "async";
+    photo.alt = `${titleOf(work)} · ${t("sceneLabel")}`;
+    const play = icon("play-circle", 29);
+    play.className = "work-play";
+    art.append(photo, play);
+    const heading = element("h3");
+    const titleLink = videoLink(work);
+    titleLink.textContent = titleOf(work);
+    heading.append(titleLink);
+    const meta = element("div", "work-meta");
+    const count = element("span", "work-views");
+    count.append(
+      element("span", "", t("views")),
+      element("strong", "", metric(work.plays, work.playValue)),
+    );
+    meta.append(count, qrButton(work));
+    article.append(art, heading, meta);
+    return article;
+  }
+  function archiveRow(work, i) {
+    const row = element("article", "archive-row");
+    row.dataset.workId = work.id;
+    const link = videoLink(work, "archive-title");
+    link.textContent = titleOf(work);
+    const views = element("span", "archive-metric views");
+    views.append(
+      element("strong", "", metric(work.plays, work.playValue)),
+      element("span", "", t("views")),
+    );
+    const likes = element("span", "archive-metric likes");
+    likes.append(
+      element("strong", "", metric(work.likes, work.likeValue)),
+      element("span", "", t("likes")),
+    );
+    row.append(
+      element("span", "archive-number", String(i + 1).padStart(2, "0")),
+      link,
+      views,
+      likes,
+      qrButton(work),
+    );
+    return row;
+  }
+  function matches(work) {
+    const categoryMatch =
+      state.category === "all" || work.category === state.category;
+    const haystack = searchText(
+      [work.title, work.originalTitle, ...Object.values(work.titles || {})].join(" "),
+    );
+    return categoryMatch && (!state.query || haystack.includes(state.query));
+  }
+  function render() {
+    const results = works.filter(matches);
+    const visibleFeatured = featured.filter(matches);
+    $("#galleryGrid").replaceChildren(...visibleFeatured.map(card));
+    $("#galleryGrid").hidden = !visibleFeatured.length;
+    $("#emptyState").hidden = results.length > 0;
+    $("#resultStatus").textContent = t("result")(results.length);
+    let rest = results.filter((work) => !featuredIds.has(work.id));
+    const order = $("#sortSelect").value;
+    if (order === "plays")
+      rest = rest.slice().sort((a, b) => b.playValue - a.playValue);
+    if (order === "likes")
+      rest = rest.slice().sort((a, b) => b.likeValue - a.likeValue);
+    const archiveVisible =
+      rest.length > 0 &&
+      (state.archiveOpen || Boolean(state.query) || state.category !== "all");
+    $("#archive").hidden = !archiveVisible;
+    $("#archiveList").replaceChildren(
+      ...rest.slice(0, state.limit).map(archiveRow),
+    );
+    $("#loadMore").hidden = rest.length <= state.limit;
+    $("#loadMore").setAttribute(
+      "aria-label",
+      `${t("loadMore")} · ${t("showing")(Math.min(state.limit, rest.length), rest.length)}`,
+    );
+    $("#exploreButton").hidden =
+      !rest.length || Boolean(state.query) || state.category !== "all";
+    $("#exploreButton").setAttribute("aria-expanded", String(archiveVisible));
+    $("#exploreButton span").textContent = t(
+      archiveVisible ? "collapse" : "explore",
+    );
+    $$("[data-filter]").forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.filter === state.category),
+      ),
+    );
+  }
+  function setCategory(category) {
+    state.category = category;
+    state.limit = 12;
+    render();
+  }
+  function closeMenu() {
+    $("#mainNav").classList.remove("is-open");
+    $("#menuToggle").setAttribute("aria-expanded", "false");
+    $("#menuToggle").setAttribute("aria-label", t("menuOpen"));
+  }
+  let toastTimer;
+  function toast(message) {
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, ms || 1900);
+    $("#toast").textContent = message;
+    $("#toast").hidden = false;
+    toastTimer = setTimeout(() => {
+      $("#toast").hidden = true;
+    }, 3200);
   }
-  var copyBtn = document.getElementById('copyWx');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', function () {
-      var wx = copyBtn.getAttribute('data-wx');
-      var done = function () { toast('✓ ' + wx); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(wx).then(done).catch(function () { fallbackCopy(wx, done); });
-      } else { fallbackCopy(wx, done); }
+  const audio = $("#audio");
+  function updateMusic() {
+    $("#musicButton").textContent = t(audio.paused ? "musicOff" : "musicOn");
+    $("#musicButton").setAttribute("aria-pressed", String(!audio.paused));
+  }
+  const dialog = $("#qrDialog");
+  let previousFocus;
+  let qrWork;
+  function updateDialog() {
+    if (!qrWork) return;
+    $("#qrTitle").textContent = titleOf(qrWork);
+    $("#qrImage").src = `assets/qr/works/${qrWork.id}.png`;
+    $("#qrImage").alt = `${titleOf(qrWork)} · ${t("qrAlt")}`;
+    $("#qrOriginalLink").href = qrWork.url;
+  }
+  function openQr(id, trigger) {
+    qrWork = byId.get(id);
+    if (!qrWork) return;
+    previousFocus = trigger;
+    updateDialog();
+    dialog.showModal();
+  }
+  function applyLanguage(lang) {
+    state.lang = translations[lang] ? lang : "zh";
+    document.documentElement.lang = state.lang === "zh" ? "zh-CN" : state.lang;
+    document.title = t("pageTitle");
+    $$("[data-i18n]").forEach((el) => {
+      const value = t(el.dataset.i18n);
+      if (typeof value === "string") el.textContent = value;
     });
-  }
-  function fallbackCopy(text, cb) {
+    $$("[data-lang]").forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.lang === state.lang),
+      ),
+    );
+    $("#searchInput").placeholder = t("searchPlaceholder");
+    $("#closeDialog").setAttribute("aria-label", t("close"));
+    $("#heroArt").setAttribute(
+      "aria-label",
+      `${titleOf(hero)} · ${t("external")}`,
+    );
+    $("#heroViews").textContent = metric(hero.plays, hero.playValue);
+    $("#heroLikes").textContent = metric(hero.likes, hero.likeValue);
+    $("#menuToggle").setAttribute(
+      "aria-label",
+      t($("#mainNav").classList.contains("is-open") ? "menuClose" : "menuOpen"),
+    );
+    updateMusic();
+    updateDialog();
+    render();
     try {
-      var t = document.createElement('textarea');
-      t.value = text; t.style.position = 'fixed'; t.style.opacity = '0';
-      document.body.appendChild(t); t.select(); document.execCommand('copy');
-      document.body.removeChild(t); cb();
-    } catch (e) {
-      // 末端兜底：选中微信号本体并延长提示，给手动复制留时间
-      try {
-        var code = copyBtn.querySelector('.wx__code');
-        if (code && window.getSelection) {
-          var r = document.createRange(); r.selectNodeContents(code);
-          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
-        }
-      } catch (e2) {}
-      toast(text + '（请手动复制）', 4200);
+      localStorage.setItem("dnm-lang", state.lang);
+    } catch (_) {
+      /* Storage is optional. */
     }
   }
-
-  /* ---------------- BGM（容错：无文件则隐藏按钮） ---------------- */
-  var audio = document.getElementById('audio');
-  var bgmBtn = document.getElementById('bgm');
-  if (audio && bgmBtn) {
-    var loaded = false;
-    audio.addEventListener('error', function () { bgmBtn.style.display = 'none'; });
-    bgmBtn.addEventListener('click', function () {
-      if (!loaded) { audio.load(); loaded = true; }
-      if (audio.paused) {
-        var p = audio.play();
-        if (p && p.catch) p.catch(function () {});
-        bgmBtn.setAttribute('aria-pressed', 'true');
-        bgmBtn.classList.add('playing');
-      } else {
-        audio.pause();
-        bgmBtn.setAttribute('aria-pressed', 'false');
-        bgmBtn.classList.remove('playing');
-      }
-    });
-  }
-
-  /* ---------------- 导航 scrollspy ---------------- */
-  if ('IntersectionObserver' in window) {
-    var links = {};
-    document.querySelectorAll('.nav__links a').forEach(function (a) {
-      links[a.getAttribute('href')] = a;
-    });
-    var spy = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        var link = links['#' + e.target.id];
-        if (link && e.isIntersecting) {
-          Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
-          link.classList.add('active');
-        }
+  $$("[data-filter]").forEach((button) =>
+    button.addEventListener("click", () => setCategory(button.dataset.filter)),
+  );
+  $$("[data-lang]").forEach((button) =>
+    button.addEventListener("click", () => applyLanguage(button.dataset.lang)),
+  );
+  $("#searchInput").addEventListener("input", (event) => {
+    state.query = searchText(event.target.value.trim());
+    state.limit = 12;
+    render();
+  });
+  $("#resetFilters").addEventListener("click", () => {
+    $("#searchInput").value = "";
+    state.query = "";
+    setCategory("all");
+    $("#searchInput").focus();
+  });
+  $("#sortSelect").addEventListener("change", () => {
+    state.limit = 12;
+    render();
+  });
+  $("#loadMore").addEventListener("click", () => {
+    state.limit += 12;
+    render();
+  });
+  $("#exploreButton").addEventListener("click", () => {
+    state.archiveOpen = !state.archiveOpen;
+    render();
+    if (state.archiveOpen)
+      $("#archive").scrollIntoView({
+        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "auto"
+          : "smooth",
+        block: "start",
       });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    ['stats', 'about', 'content', 'works', 'value', 'brands', 'follow', 'contact'].forEach(function (id) {
-      var s = document.getElementById(id); if (s) spy.observe(s);
-    });
+  });
+  $("#menuToggle").addEventListener("click", () => {
+    const open = $("#mainNav").classList.toggle("is-open");
+    $("#menuToggle").setAttribute("aria-expanded", String(open));
+    $("#menuToggle").setAttribute(
+      "aria-label",
+      t(open ? "menuClose" : "menuOpen"),
+    );
+  });
+  $$("#mainNav a").forEach((link) =>
+    link.addEventListener("click", () => {
+      if (link.dataset.categoryLink) {
+        state.query = "";
+        $("#searchInput").value = "";
+        setCategory(link.dataset.categoryLink);
+      }
+      closeMenu();
+    }),
+  );
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-qr]");
+    if (trigger) openQr(trigger.dataset.qr, trigger);
+  });
+  $("#closeDialog").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("close", () => {
+    if (previousFocus && previousFocus.isConnected) previousFocus.focus();
+  });
+  dialog.addEventListener("click", (event) => {
+    if (event.target !== dialog) return;
+    const r = dialog.getBoundingClientRect();
+    if (
+      event.clientX < r.left ||
+      event.clientX > r.right ||
+      event.clientY < r.top ||
+      event.clientY > r.bottom
+    )
+      dialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+    if (
+      event.key === "/" &&
+      !dialog.open &&
+      !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)
+    ) {
+      event.preventDefault();
+      $("#searchInput").focus();
+    }
+  });
+  $("#copyContact").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText("qianpai857");
+      toast(t("copied"));
+    } catch (_) {
+      const range = document.createRange();
+      range.selectNodeContents($("#copyContact strong"));
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      toast(t("copyFallback"));
+    }
+  });
+  $("#musicButton").addEventListener("click", async () => {
+    if (!audio.paused) audio.pause();
+    else {
+      try {
+        await audio.play();
+      } catch (_) {
+        toast(t("musicError"));
+      }
+    }
+    updateMusic();
+  });
+  audio.addEventListener("play", updateMusic);
+  audio.addEventListener("pause", updateMusic);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden && !audio.paused) audio.pause();
+  });
+  let initialLang = "zh";
+  try {
+    initialLang = localStorage.getItem("dnm-lang") || "zh";
+  } catch (_) {
+    /* Storage is optional. */
   }
+  applyLanguage(initialLang);
 })();

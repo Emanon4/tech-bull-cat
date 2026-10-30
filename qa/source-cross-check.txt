@@ -1,0 +1,2 @@
+80/80 work IDs, original URLs and displayed metrics match the 261-public-work research snapshot.
+All 80 QR images decoded successfully with macOS Vision; each payload equals its video URL.

@@ -1,0 +1,267 @@
+{
+  "testedAt": "2026-10-30T12:34:32.362Z",
+  "url": "http://localhost:8735/",
+  "titles": [
+    {
+      "lang": "zh",
+      "count": 80,
+      "allTitlesMatch": true,
+      "allUrlsMatch": true
+    },
+    {
+      "lang": "en",
+      "count": 80,
+      "allTitlesMatch": true,
+      "allUrlsMatch": true
+    },
+    {
+      "lang": "ja",
+      "count": 80,
+      "allTitlesMatch": true,
+      "allUrlsMatch": true
+    }
+  ],
+  "search": [
+    {
+      "lang": "zh",
+      "query": "特斯拉",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "共 1 部作品 · 数据采集于 2026.10.30",
+      "title": "死磕纯电的特斯拉，为何从不考虑增程和插混？"
+    },
+    {
+      "lang": "zh",
+      "query": "Tesla",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "共 1 部作品 · 数据采集于 2026.10.30",
+      "title": "死磕纯电的特斯拉，为何从不考虑增程和插混？"
+    },
+    {
+      "lang": "zh",
+      "query": "テスラ",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "共 1 部作品 · 数据采集于 2026.10.30",
+      "title": "死磕纯电的特斯拉，为何从不考虑增程和插混？"
+    },
+    {
+      "lang": "zh",
+      "query": "ＴＥＳＬＡ",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "共 1 部作品 · 数据采集于 2026.10.30",
+      "title": "死磕纯电的特斯拉，为何从不考虑增程和插混？"
+    },
+    {
+      "lang": "en",
+      "query": "特斯拉",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "1 story · Snapshot: 30 Oct 2026",
+      "title": "Why does Tesla stay all-electric and avoid range extenders and plug-in hybrids?"
+    },
+    {
+      "lang": "en",
+      "query": "Tesla",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "1 story · Snapshot: 30 Oct 2026",
+      "title": "Why does Tesla stay all-electric and avoid range extenders and plug-in hybrids?"
+    },
+    {
+      "lang": "en",
+      "query": "テスラ",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "1 story · Snapshot: 30 Oct 2026",
+      "title": "Why does Tesla stay all-electric and avoid range extenders and plug-in hybrids?"
+    },
+    {
+      "lang": "en",
+      "query": "ＴＥＳＬＡ",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "1 story · Snapshot: 30 Oct 2026",
+      "title": "Why does Tesla stay all-electric and avoid range extenders and plug-in hybrids?"
+    },
+    {
+      "lang": "ja",
+      "query": "特斯拉",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "全1作品 · 2026年10月30日取得",
+      "title": "テスラはなぜEV一筋で、レンジエクステンダーやプラグインハイブリッドを選ばないのか？"
+    },
+    {
+      "lang": "ja",
+      "query": "Tesla",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "全1作品 · 2026年10月30日取得",
+      "title": "テスラはなぜEV一筋で、レンジエクステンダーやプラグインハイブリッドを選ばないのか？"
+    },
+    {
+      "lang": "ja",
+      "query": "テスラ",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "全1作品 · 2026年10月30日取得",
+      "title": "テスラはなぜEV一筋で、レンジエクステンダーやプラグインハイブリッドを選ばないのか？"
+    },
+    {
+      "lang": "ja",
+      "query": "ＴＥＳＬＡ",
+      "archiveHidden": false,
+      "count": 1,
+      "ids": [
+        "7538294840723836206"
+      ],
+      "status": "全1作品 · 2026年10月30日取得",
+      "title": "テスラはなぜEV一筋で、レンジエクステンダーやプラグインハイブリッドを選ばないのか？"
+    }
+  ],
+  "responsive": [
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 320,
+      "width": 320
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 768,
+      "width": 768
+    },
+    {
+      "lang": "zh-CN",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "lang": "en",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "lang": "ja",
+      "overflow": false,
+      "rendered": 80,
+      "scrollWidth": 1440,
+      "width": 1440
+    }
+  ],
+  "sort": {
+    "playsFirst": "7292720570997722387",
+    "likesFirst": "7297907987966938378"
+  },
+  "qr": {
+    "open": true,
+    "qr": "assets/qr/works/7538294840723836206.png",
+    "title": "Why does Tesla stay all-electric and avoid range extenders and plug-in hybrids?",
+    "url": "https://www.douyin.com/video/7538294840723836206"
+  },
+  "profile": {
+    "lang": "en",
+    "overflow": false,
+    "sections": 8,
+    "title": "Tech Bull Cat · Profile",
+    "url": "http://localhost:8735/about.html"
+  },
+  "returned": {
+    "cards": 8,
+    "lang": "en",
+    "url": "http://localhost:8735/"
+  },
+  "console": []
+}
